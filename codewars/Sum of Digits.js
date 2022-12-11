@@ -10,19 +10,20 @@
  */
 
 // First option   
-function digitalRoot(num) {
-    let sum = num;
-    let arr = []
+function summ(number) {
+
+    let sum = number;
 
     while (sum > 9) {
-        arr = sum.toString().split('')
-        sum = arr.reduce( (prev, current) => +prev + +current)
-        
+        sum = sum.toString().split('').reduce((prev, current) => +prev + +current)
     }
-    return console.log(sum); 
+    return console.log(sum);
 }
-digitalRoot(232)
-digitalRoot(9879789)
+
+summ(19)
+summ(3)
+summ(327)
+summ(98993)
 
 // Second option   
 function digitalRoot(n) {
