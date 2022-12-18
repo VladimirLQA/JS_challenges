@@ -7,14 +7,14 @@
  */
 
 function quarter(min) {
-    if ( typeof min === 'number' && min >= 0 && min <= 59 ) {
-        if (min >= 0 || min <= 14) {
+    if (typeof min === 'number' && min >= 0 && min <= 59) {
+        if (min >= 0 && min <= 14) {
             console.log(`First quarter: ${min}`);
 
         } else if (min >= 15 && min < 30) {
             console.log(`Second quarter: ${min}`);
 
-        }  else if (min >= 30 && min < 45) {
+        } else if (min >= 30 && min < 45) {
             console.log(`Third quarter: ${min}`);
 
         } else {
@@ -31,6 +31,21 @@ quarter(59);
 quarter(-1);
 quarter('5df');
 
+// Second option
+
+function hour(min) {
+    let part = 1;
+    if (min && typeof min === 'number' && min >= 0 && min <= 59) {
+        if (min >= 0 && min <= 14) part = 1;
+        if (min >= 15 && min <= 29) part = 2;
+        if (min >= 30 && min <= 44) part = 3;
+        if (min >= 45 && min <= 59) part = 4;
+        return `Number ${min} is in ${part} quarter`;
+    } else {
+        throw new Error(`${min} - is invalid value`);
+    };
+};
+
 /**
  * 2. написать функцию для возведения числа в степень циклом. На вход подаётся число и степень
  * при вводе аргументов функции 3, 4 вывести 3 в 4 степени 81
@@ -39,18 +54,18 @@ quarter('5df');
 
 function pow(a, b) {
 
-    if (b < 0 || typeof b === 'string') throw new Error('Invalid value')
-    if(b === 0) return 1
-    let result = 1
+    if (b < 0 || typeof b === 'string') throw new Error('Invalid value');
+    if (b === 0) return 1;
+    let result = 1;
 
-    for(let i = 1; i <= b; i++) {
-        result *= a
+    for (let i = 1; i <= b; i++) {
+        result *= a;
     }
-    return console.log(result)
+    return console.log(result);
 }
 pow(5, 6);
 pow(3, 2);
-pow(2, 22)
+pow(2, 22);
 pow(5, 'dfd');
 
 /**
@@ -61,8 +76,8 @@ pow(5, 'dfd');
  * если а = 2 то выводим на экран 9(2+7)
  */
 function sum(a) {
-    if(typeof a === 'string') throw new Error(`${a} - is a string`)
-    return (a === 0 || a === 2) ? a + 7 : a / 10
+    if (typeof a === 'string') throw new Error(`${a} - is a string`);
+    return (a === 0 || a === 2) ? a + 7 : a / 10;
 }
 
 console.log(sum(5));
