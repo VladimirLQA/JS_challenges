@@ -1,3 +1,1 @@
-new file
-the description of  the project will be written here
-soon...
+## Storage for JavaScript tasks from various platform and events 
