@@ -45,7 +45,7 @@ function encode(string) {
 }
 
 
-const encode = plaintext => plaintext.replace(/[a-z]/gi, c => console.log(1 - c.charCodeAt(0) % 2))
+const encode = plaintext => plaintext.replace(/[a-z]/gi, c => 1 - c.charCodeAt(0) % 2)
 
 
 
