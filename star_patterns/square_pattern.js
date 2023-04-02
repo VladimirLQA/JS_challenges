@@ -4,7 +4,8 @@
     *****
     *****
     *****
-* */
+
+*/
 
 function square_pattern(star, times) {
     let str = '';

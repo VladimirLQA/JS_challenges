@@ -1,3 +1,13 @@
+/* * * * * *
+
+*********
+ *******
+  *****
+   ***
+    *
+
+* * * * * */
+
 function reversed_pyramid_pattern(star, times) {
     let str = '';
     for(let i = 0; i < times; i++) {

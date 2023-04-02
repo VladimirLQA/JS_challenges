@@ -1,3 +1,19 @@
+/* * * * * *
+
+    *
+   **
+  ***
+ ****
+*****
+
+*
+**
+***
+****
+*****
+
+* * * * */
+
 function left_pattern(star, times){
     let str = '';
     for(let i = 1; i <= times; i++){

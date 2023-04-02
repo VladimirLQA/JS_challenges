@@ -1,3 +1,13 @@
+/*
+
+*****
+****
+***
+**
+*
+
+*/
+
 function downward_triangle(star, times){
     let str = '';
     for(let i = 0; i < times; i++){
