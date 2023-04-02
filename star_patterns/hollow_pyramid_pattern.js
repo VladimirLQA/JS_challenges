@@ -17,10 +17,10 @@ function hollow_pyramid_pattern(star, times) {
 
         for (let k = 0; k < 2 * i - 1; k++) {
             if (i === 1 || i === times) {
-                str += `*`;
+                str += star;
             } else {
                 if (k === 0 || k === 2 * i - 2) {
-                    str += `*`;
+                    str += star;
                 } else {
                     str += ` `;
                 }
