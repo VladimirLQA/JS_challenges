@@ -13,7 +13,6 @@ function isUnique(string) {
             return false;
         }
     }
-
     return true
 }
 
