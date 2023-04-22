@@ -12,7 +12,7 @@ function flatten(array) {
     for (let i = 0; i < array.length; i++) {
         if (Array.isArray(array[i])) {
             const flat = flatten(array[i])
-            console.log(flat)
+
             for (let j = 0; j < flat.length; j++) {
                 resultArray.push(flat[j])
             }
