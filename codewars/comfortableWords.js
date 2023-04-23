@@ -1,4 +1,4 @@
-/**
+/*
  * A comfortable word is a word which you can type always 
  * alternating the hand you type with (assuming you type 
  * using a QWERTY keyboard and use fingers as shown in the image below).
