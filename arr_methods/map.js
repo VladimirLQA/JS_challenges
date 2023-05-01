@@ -1,11 +1,10 @@
 function ownMap(array, mapFunction) {
-
     let resultArray = [];
+
     for( let i = 0; i < array.length; i++) {
         const result = mapFunction(array[i], i, array);
         resultArray.push(result);
     }
-
     return resultArray;
 }
 

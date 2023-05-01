@@ -1,5 +1,6 @@
 function ownFilter(array, filterFunction) {
     let resultArr = [];
+
     for ( let i = 0; i < array.length; i++) {
         const result = filterFunction(array[i], i, array);
         if(result) {
