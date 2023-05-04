@@ -20,11 +20,6 @@ const test1 = {a: 1, b: {c: 1}}
 const test2 = {a: 1, b: {c: 2}}
 console.log(deepEqual(source, test1)) // -> true
 console.log(deepEqual(source, test2)) // -> false
-// console.log(deepEqual(NaN, NaN)) // -> true
-// console.log(deepEqual('test', 'test!')) // -> false
-// console.log(deepEqual(null)) // -> true
-//
-// console.log(Object.keys(source))
-// for (const key of Object.keys(source)) {
-//     console.log(source[key])
-// }
+console.log(deepEqual(NaN, NaN)) // -> true
+console.log(deepEqual('test', 'test!')) // -> false
+console.log(deepEqual(null)) // -> true
