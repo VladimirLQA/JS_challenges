@@ -6,7 +6,7 @@ function add(a, b) {
     if (typeof b === 'undefined') {
         return function sum(c) {
             if ( typeof c === 'undefined'){
-                return sum()
+                return sum
             }
             return a + c;
         }
