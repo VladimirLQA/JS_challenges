@@ -7,14 +7,14 @@
 
 function freqSep(str, separator) {
     return [...str.toLowerCase()].map((el, index, arr) =>
-        arr.filter(e => el === e).length).join(`${separator} `)
+        arr.filter(e => el === e).length).join(`${separator} `);
 }
 
-console.log(freqSep('Toster', ';'))
-console.log(freqSep('ffaanntazzzy', ';'))
-console.log(freqSep('aaaaaaaaaaa', ';'))
+console.log(freqSep('Toster', ';'));
+console.log(freqSep('ffaanntazzzy', ';'));
+console.log(freqSep('aaaaaaaaaaa', ';'));
 
-
+console.log(`================================================`);
 
 /*
  * "Напишите функцию, которая принимает список строк в качестве аргумента и возвращает отфильтрованный список,
@@ -32,10 +32,12 @@ console.log(freqSep('aaaaaaaaaaa', ';'))
 
 function returnWithoutGeese(arr) {
     const geese = ["Африканка", "Римская хохлатая", "Тулуза", "Пилигрим", "Штайнбахер"];
-    return arr.filter(el => !geese.includes(el))
+    return arr.filter(el => !geese.includes(el));
 }
 
 console.log(returnWithoutGeese(["Кряква", "Крюк Билл", "Африканка", "Хохлатая", "Пилигрим", "Тулуза", "Синий шведский"]));
+
+console.log(`================================================`);
 
 /*
 * "Напишите программу, которая считывает целое положительное число n, 1 <= n <= 9, и выводит сумму равную
@@ -46,13 +48,13 @@ console.log(returnWithoutGeese(["Кряква", "Крюк Билл", "Африк
 */
 
 function generateConcatedNumber(number, numberOfRepeats) {
-    return +(''+number).repeat(numberOfRepeats)
+    return +(''+number).repeat(numberOfRepeats);
 }
 
 function getConcatedValue(number, pattern) {
     return pattern
         ? ''
-        :`${number} + ${generateConcatedNumber(number, 2)} + ${generateConcatedNumber(number, 3)} === ${number + generateConcatedNumber(number, 2) + generateConcatedNumber(number, 3)}`
+        :`${number} + ${generateConcatedNumber(number, 2)} + ${generateConcatedNumber(number, 3)} === ${number + generateConcatedNumber(number, 2) + generateConcatedNumber(number, 3)}`;
 }
 
 console.log(getConcatedValue(1));

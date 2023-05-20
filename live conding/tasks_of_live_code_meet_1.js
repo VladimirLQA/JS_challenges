@@ -5,7 +5,7 @@
  */
 
 function some(a, b) {
-    let result
+    let result;
     if (b === 'string' || b === 'number' || b === 'boolean') {
 
         if (b === 'string') {
@@ -15,20 +15,21 @@ function some(a, b) {
             result = a;
 
         } else if (b === 'boolean') {
-            result = Boolean(a)
+            result = Boolean(a);
         }
     }
     else {
-        throw new Error(`Cannot convert to ${b}`)
+        console.error(`Cannot convert to ${b}`)
     }
-
-    return result
+    return result;
 }
 
 console.log(some(1, 'string'));
 console.log(some('dfd', 'number'));
 console.log(some(1, 'boolean'));
 console.log(some(1, 'dfs'));
+
+console.log(`======================================================================`);
 
 /*
  * написать функцию которая принимает на вход строку и заменяет каждую букву на её порядковый номер в алфавите,
@@ -50,6 +51,7 @@ function name(string) {
 console.log(name('ababa'));
 console.log(name('jkhuifugy'));
 
+console.log(`======================================================================`);
 
 /*
  * написать функцию которая принимает на вход строку где каждое слово содержит цифру от 1 до 9,
@@ -69,11 +71,12 @@ function sort(string) {
 
             if (+char) {
                 newArr[+char - 1] = word;
-            };
+            }
         });
     });
     return console.log(newArr.join(' '));
 }
+
 sort('4of Fo1r pe6ople g3ood th5e the2');
 
 

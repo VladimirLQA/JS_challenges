@@ -42,9 +42,18 @@ function hour(min) {
         if (min >= 45 && min <= 59) part = 4;
         return `Number ${min} is in ${part} quarter`;
     } else {
-        throw new Error(`${min} - is invalid value`);
-    };
-};
+        console.error(`${min} - is invalid value`);
+    }
+}
+
+hour(5);
+hour(16);
+hour(33);
+hour(59);
+hour(-1);
+hour('5df');
+
+console.log(`================================================`);
 
 /*
  * 2. написать функцию для возведения числа в степень циклом. На вход подаётся число и степень
@@ -54,7 +63,7 @@ function hour(min) {
 
 function pow(a, b) {
 
-    if (b < 0 || typeof b === 'string') throw new Error('Invalid value');
+    if (b < 0 || typeof b === 'string') console.error('Invalid value');
     if (b === 0) return 1;
     let result = 1;
 
@@ -68,6 +77,8 @@ pow(3, 2);
 pow(2, 22);
 pow(5, 'dfd');
 
+console.log(`================================================`);
+
 /*
  * 3. Если переменная a равна нулю или равна двум, то прибавьте к ней 7, 
  * иначе поделите ее на 10. Выведите новое значение переменной на экран. 
@@ -76,7 +87,7 @@ pow(5, 'dfd');
  * если а = 2 то выводим на экран 9(2+7)
  */
 function sum(a) {
-    if (typeof a === 'string') throw new Error(`${a} - is a string`);
+    if (typeof a === 'string') console.error(`${a} - is a string`);
     return (a === 0 || a === 2) ? a + 7 : a / 10;
 }
 

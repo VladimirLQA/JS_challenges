@@ -17,7 +17,7 @@ function fib(number) {
     } else if (number === 2) {
         return result.join(' ');
 
-    } else {console.log(`${number} - is invalid value`)}
+    } else {console.error(`${number} - is invalid value`)}
 }
 
 console.log(fib(1));
@@ -25,6 +25,7 @@ console.log(fib(3));
 console.log(fib(8));
 console.log(fib(21));
 
+console.log(`================================================`);
 
 /*
  * на вход функция получает day и month в виде цифр.
