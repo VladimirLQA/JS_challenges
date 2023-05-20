@@ -1,4 +1,4 @@
-/**
+/*
  * Given n, take the sum of the digits of n. 
  * If that value has more than one digit, continue reducing in this way until 
  * a single-digit number is produced. 
@@ -24,6 +24,8 @@ summ(19)
 summ(3)
 summ(327)
 summ(98993)
+
+console.log(`==============================`);
 
 // Second option   
 function digitalRoot(n) {
