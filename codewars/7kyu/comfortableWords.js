@@ -30,7 +30,7 @@ const comfortableWord = word => {
 console.log(comfortableWord('yams'));
 console.log(comfortableWord('test'));
 
-
+console.log(`==============================================`);
 
 const comfortable_word = word => {
     let right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm'];
