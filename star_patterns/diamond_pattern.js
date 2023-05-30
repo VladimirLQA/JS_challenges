@@ -26,7 +26,7 @@ function diamond_pattern(star, times) {
 
     for (let k = 1; k <= times; k++) {
         for (let t = 0; t < k; t++) {
-            str += `-`;
+            str += ` `;
         }
         for (let f = (times - k) * 2 - 1; f > 0; f--) {
             str += star;
