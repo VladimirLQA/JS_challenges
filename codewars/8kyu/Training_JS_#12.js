@@ -25,7 +25,6 @@
 }
 
 console.log(`==============================================================`);
-console.log(`==============================================================`);
 
 {
     const giveMeFive = obj => Object.entries(obj).join`,`.split`,`.filter( el => el.length === 5);
