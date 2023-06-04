@@ -30,3 +30,20 @@ console.log(`===================================`);
     console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14])); // [8, -50]
     console.log(countPositivesSumNegatives([])); // []
 }
+
+console.log(`===================================`);
+
+{
+    function countPositivesSumNegatives(array) {
+        if ( array.length === 0 ) return [];
+        return array.reduce((result, el) => {
+            if (el > 0) result[0]++
+            else result[1] += el;
+            return result;
+        }, [0, 0]);
+    }
+
+    console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])); // [10, -65]
+    console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14])); // [8, -50]
+    console.log(countPositivesSumNegatives([])); // []
+}
