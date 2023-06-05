@@ -23,7 +23,7 @@
 
 console.log(`==================================================================`);
 
-    // Second solution
+// Second solution
 
 {
     function rot13(message) {
