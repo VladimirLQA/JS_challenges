@@ -12,6 +12,7 @@
         }
         return plus
     }
+
     console.log(sum('dfgdf', 3, '4', 5));
 }
 
@@ -27,6 +28,7 @@ console.log(`===========================================`);
         })
         return plus
     }
+
     console.log(sum('dfgdf', 3, '4', 5));
 }
 
@@ -36,5 +38,6 @@ console.log(`===========================================`);
     function sum() {
         return [...arguments].filter(item => typeof item === 'number').reduce((a, b) => a + b);
     }
+
     console.log(sum('31231', 3, '4', 2323));
 }

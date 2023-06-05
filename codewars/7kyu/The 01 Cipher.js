@@ -1,10 +1,10 @@
 /**
- * It looks at the letter, and sees it's index in the alphabet, 
- * the alphabet being a-z, if you didn't know. If it is odd, 
+ * It looks at the letter, and sees it's index in the alphabet,
+ * the alphabet being a-z, if you didn't know. If it is odd,
  * it is replaced with 1, if it's even, its replaced with 0.
- *  Note that the index should start from 0. Also, 
+ *  Note that the index should start from 0. Also,
  * if the character isn't a letter, it remains the same.
- * 
+ *
  * Example
  * encode("Hello World!"); // => "10110 00111!"
  */
@@ -18,7 +18,6 @@ function encode(p) {
     }
     return p.toLowerCase().split``.map(v => dict.hasOwnProperty(v) ? dict[v] : v).join``
 }
-
 
 
 const isEven = (num) => num % 2 === 0;
@@ -46,9 +45,6 @@ function encode(string) {
 
 
 const encode = plaintext => plaintext.replace(/[a-z]/gi, c => 1 - c.charCodeAt(0) % 2)
-
-
-
 
 
 // function encode(s) {
