@@ -4,8 +4,8 @@
 * (the dedicated builtin(s) functionalities are deactivated)
 */
 
-let testArray1 = [1,2,3];
-let testArray2 = [1,null,14,"two"];
+let testArray1 = [1, 2, 3];
+let testArray2 = [1, null, 14, "two"];
 
 {
     function reverse(array) {
@@ -15,6 +15,7 @@ let testArray2 = [1,null,14,"two"];
         }
         return result;
     }
+
     console.log(reverse(testArray1))
     console.log(reverse(testArray2))
 }
@@ -22,8 +23,10 @@ let testArray2 = [1,null,14,"two"];
 console.log(`========================================`)
 
 {
-    function reverse (array) {
-        return array.reduceRight((a, b) => { return a.push(b), a}, [])
+    function reverse(array) {
+        return array.reduceRight((a, b) => {
+            return a.push(b), a
+        }, [])
         // return array.reduceRight((a, b) => [...a, b], [])
     }
 
@@ -49,7 +52,7 @@ console.log(`========================================`)
 
 {
     function reverse(array) {
-        return array.map((v, i) =>  array[array.length - 1 - i]);
+        return array.map((v, i) => array[array.length - 1 - i]);
     }
 
     console.log(reverse(testArray1))

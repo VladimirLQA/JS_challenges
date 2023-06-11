@@ -4,11 +4,12 @@
 * */
 
 function findShort(string) {
-    return Math.min(...string.split` `.map (s => s.length));
+    return Math.min(...string.split` `.map(s => s.length));
 }
+
 console.log(findShort('name fantastic boy avadakedavra'));
 
-function findShort(s){
+function findShort(s) {
     let arr = s.split` `;
     let min = arr[0].length;
     for (let i = 0; i < arr.length; i++) {
@@ -21,7 +22,7 @@ function findShort(s){
 
 console.log(findShort('name fantastic boy avadakedavra'));
 
-function findShort(s){
+function findShort(s) {
     return s.split` `.map(a => a.length).reduce((a, b) => Math.min(a, b))
 }
 

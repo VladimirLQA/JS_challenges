@@ -12,7 +12,7 @@
 
 {
     const alienLanguage = (str: string): string => {
-       return str.split(' ').map(word => word.slice(0, -1).toUpperCase() + word.slice(-1).toLowerCase()).join(' ');
+        return str.split(' ').map(word => word.slice(0, -1).toUpperCase() + word.slice(-1).toLowerCase()).join(' ');
     }
 
     console.log(alienLanguage("My name is John")); // "My NAMe Is JOHn"

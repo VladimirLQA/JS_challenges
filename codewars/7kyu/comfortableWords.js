@@ -22,7 +22,7 @@ const comfortableWord = word => {
     const left = 'q, w, e, r, t, a, s, d, f, g, z, x, c, v, b'.split(', ')
     const right = 'y, u, i, o, p, h, j, k, l, n, m'.split(', ')
 
-    let isComfortable = [...word].map((e, i) =>  i % 2 ? right.includes(e) : left.includes(e)) 
+    let isComfortable = [...word].map((e, i) => i % 2 ? right.includes(e) : left.includes(e))
     return isComfortable.every(el => el === true) || isComfortable.every(el => el === false)
 };
 
@@ -39,24 +39,36 @@ const comfortable_word = word => {
     if (right.includes(word[0])) {
         word.split('').map((v, i) => {
             if (i % 2 === 0) {
-                if (right.includes(v)) { arr.push(true) }
-                else { arr.push(false) }
+                if (right.includes(v)) {
+                    arr.push(true)
+                } else {
+                    arr.push(false)
+                }
             }
             if (i % 2 !== 0) {
-                if (left.includes(v)) { arr.push(true) }
-                else { arr.push(false) }
+                if (left.includes(v)) {
+                    arr.push(true)
+                } else {
+                    arr.push(false)
+                }
             }
         })
     }
     if (left.includes(word[0])) {
         word.split('').map((v, i) => {
             if (i % 2 !== 0) {
-                if (right.includes(v)) { arr.push(true) }
-                else { arr.push(false) }
+                if (right.includes(v)) {
+                    arr.push(true)
+                } else {
+                    arr.push(false)
+                }
             }
             if (i % 2 === 0) {
-                if (left.includes(v)) { arr.push(true) }
-                else { arr.push(false) }
+                if (left.includes(v)) {
+                    arr.push(true)
+                } else {
+                    arr.push(false)
+                }
             }
         })
     }
