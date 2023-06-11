@@ -9,30 +9,31 @@
  * 
  */
 
-// First option   
-function summ(number) {
-
-    let sum = number;
-
-    while (sum > 9) {
-        sum = sum.toString().split('').reduce((prev, current) => +prev + +current)
+{
+    function summ(number) {
+        let sum = number;
+        while (sum > 9) {
+            sum = sum.toString().split('').reduce((prev, current) => +prev + +current)
+        }
+        return console.log(sum);
     }
-    return console.log(sum);
+
+    summ(19); // 1
+    summ(3); // 3
+    summ(327); // 3
+    summ(98993); // 2
 }
 
-summ(19)
-summ(3)
-summ(327)
-summ(98993)
+console.log(`======================================================`);
 
-console.log(`==============================`);
 
-// Second option   
-function digitalRoot(n) {
-    return (n - 1) % 9 + 1;
+{
+    function digitalRoot(n) {
+        return --n % 9 + 1;
+    }
+
+    console.log(digitalRoot(19)); // 1
+    console.log(digitalRoot(3)); // 3
+    console.log(digitalRoot(327)); // 3
+    console.log(digitalRoot(98993)); // 2
 }
-
-console.log(digitalRoot(199));
-console.log(digitalRoot(16));
-console.log(digitalRoot(12323));
-
