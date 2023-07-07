@@ -9,4 +9,4 @@ function ownMap(array, mapFunction) {
 }
 
 let testArray = [1, 2, 3, 4, 5];
-ownMap(testArray, (el, i, arr) => console.log(el, i, arr));
+console.log(ownMap(testArray, (el, i, arr) => el ** 2));

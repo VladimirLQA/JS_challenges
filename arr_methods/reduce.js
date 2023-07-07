@@ -1,5 +1,5 @@
 function ownReduce(array, reduceFunction, initialValue) {
-    let accumulator = initialValue === undefined ? 0 : initialValue;
+    let accumulator = initialValue ?? undefined;
 
     for ( let i = 0; i < array.length; i++) {
         accumulator = reduceFunction(accumulator, array[i], i, array)
