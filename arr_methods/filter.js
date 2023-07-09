@@ -1,9 +1,9 @@
-function ownFilter(array, filterFunction) {
-    let resultArr = [];
+function ownFilter(array, callbackFunc) {
+    let resultArr = undefined;
 
     for ( let i = 0; i < array.length; i++) {
-        if(filterFunction(array[i], i, array)) {
-            resultArr.push(array[i]);
+        if(callbackFunc(array[i], i, array)) {
+            resultArr = array[i];
             break;
         }
     }

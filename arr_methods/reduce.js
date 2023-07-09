@@ -1,8 +1,18 @@
-function ownReduce(array, reduceFunction, initialValue) {
-    let accumulator = initialValue ?? undefined;
+function ownReduce(array, callbackFunc, initialValue) {
+    let accumulator = initialValue;
+    if (array.length === 0) {
+        return accumulator;
+    }
 
-    for ( let i = 0; i < array.length; i++) {
-        accumulator = reduceFunction(accumulator, array[i], i, array)
+    let startIndex = 0;
+
+    if (accumulator === undefined) {
+        accumulator = array[0];
+        startIndex = 1;
+    }
+
+    for ( let i = startIndex; i < array.length; i++) {
+        accumulator = callbackFunc(accumulator, array[i], i, array)
     }
     return accumulator;
 }
