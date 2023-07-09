@@ -1,14 +1,14 @@
 
 function ownFind(array, callbackFunc) {
-    let resultArr = [];
+    let result = undefined;
 
     for ( let i = 0; i < array.length; i++) {
         if(callbackFunc(array[i], i, array)) {
-            resultArr.push(array[i]);
+            result = array[i];
             break;
         }
     }
-    return resultArr.length > 0 ? resultArr : undefined;
+    return result;
 }
 
 let testArray = [1, 2, 3, 4, 5];
