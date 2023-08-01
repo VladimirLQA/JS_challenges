@@ -24,7 +24,7 @@ console.log(`============================================================`);
 
 {
     function firstToLast(str: string, c: string): number {
-        if(!str.includes(c)) return -1;
+        if(!str.split('').includes(c)) return -1;
         return str.lastIndexOf(c) - str.indexOf(c);
     }
     console.log(firstToLast("ababc","a")); // 2
