@@ -21,10 +21,39 @@ Examples
 
 {
     function array(string) {
-        let splitedArray = string.split(',');
-       // if ( string.length < 3)
-        console.log(splitedArray)
+        let splitedArray = string.split(",");
+        if (splitedArray.length < 3) {
+            return null;
+        } else {
+            const middleArray = splitedArray.slice(1, -1);
+            return middleArray.length === 1 ? middleArray[0] : middleArray.join(" ");
+        }
     }
 
-    array('')
+    console.log(array("1,2,3"));
+    console.log(array("1,2,3,4"));
+    console.log(array("1,2,3,4,5"));
+    console.log(array(""));
+    console.log(array("1"));
+    console.log(array("1,2"));
+
+}
+
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+{
+    const array = (arr) => arr.split(",").slice(1,-1).join(" ") || null;
+
+    console.log(array("1,2,3"));
+    console.log(array("1,2,3,4"));
+    console.log(array("1,2,3,4,5"));
+    console.log(array(""));
+    console.log(array("1"));
+    console.log(array("1,2"));
+}
+
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+{
+
 }
