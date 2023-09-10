@@ -32,9 +32,5 @@ function mapWithFilter<T,U>(array: T[], mapFunc: MapCallBack<T, U>, filterFunc: 
     return array.map(mapFunc).filter(filterFunc);
 }
 
-
-
-
-
 console.log(mapWithFilter(testArrayNumbers, mapper, filterFunction));
 console.log(mapWithFilter(testArrayStrings, mapper, filterFunction));
