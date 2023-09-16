@@ -22,7 +22,6 @@
 console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 {
      function reverseWords(str: string): string {
-        // your code here
         return str.replace(/\S+/g, match => match.split('').reverse().join(''))
     }
     console.log(reverseWords('a b c d'));
