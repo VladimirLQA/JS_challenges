@@ -4,10 +4,6 @@
 function counter() {
     let count = 0;
 
-    this.getValue = () => {
-        return count;
-    }
-
     return {
         increment: ( value = 1) => {
             count += value;
