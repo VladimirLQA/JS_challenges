@@ -8,21 +8,21 @@
 */
 
 {
-    function formatting(numVal: number): string {
-        return numVal.toString().padStart(2, '0');
-    }
+  function formatting(numVal: number): string {
+    return numVal.toString().padStart(2, "0");
+  }
 
-    function humanReadable(seconds: number): string {
-        let hh = Math.floor(seconds / 3600);
-        let mm = Math.floor(seconds / 60) % 60;
-        let ss = seconds % 60;
-        // return `${formatting(hh)}:${formatting(mm)}:${formatting(ss)}`;
+  function humanReadable(seconds: number): string {
+    let hh = Math.floor(seconds / 3600);
+    let mm = Math.floor(seconds / 60) % 60;
+    let ss = seconds % 60;
+    // return `${formatting(hh)}:${formatting(mm)}:${formatting(ss)}`;
 
-        return [hh, mm, ss].map((num) => String(num).padStart(2, '0')).join(':');
-    }
+    return [hh, mm, ss].map((num) => String(num).padStart(2, "0")).join(":");
+  }
 
-    console.log(humanReadable(0)); // '00:00:00'
-    console.log(humanReadable(5)); // '00:00:05'
-    console.log(humanReadable(86399)); // '23:59:59'
-    console.log(humanReadable(359999)); // '99:59:59'
+  console.log(humanReadable(0)); // '00:00:00'
+  console.log(humanReadable(5)); // '00:00:05'
+  console.log(humanReadable(86399)); // '23:59:59'
+  console.log(humanReadable(359999)); // '99:59:59'
 }

@@ -10,30 +10,32 @@
  */
 
 {
-    function summ(number) {
-        let sum = number;
-        while (sum > 9) {
-            sum = sum.toString().split('').reduce((prev, current) => +prev + +current)
-        }
-        return console.log(sum);
+  function summ(number) {
+    let sum = number;
+    while (sum > 9) {
+      sum = sum
+        .toString()
+        .split("")
+        .reduce((prev, current) => +prev + +current);
     }
+    return console.log(sum);
+  }
 
-    summ(19); // 1
-    summ(3); // 3
-    summ(327); // 3
-    summ(98993); // 2
+  summ(19); // 1
+  summ(3); // 3
+  summ(327); // 3
+  summ(98993); // 2
 }
 
 console.log(`======================================================`);
 
-
 {
-    function digitalRoot(n) {
-        return --n % 9 + 1;
-    }
+  function digitalRoot(n) {
+    return (--n % 9) + 1;
+  }
 
-    console.log(digitalRoot(19)); // 1
-    console.log(digitalRoot(3)); // 3
-    console.log(digitalRoot(327)); // 3
-    console.log(digitalRoot(98993)); // 2
+  console.log(digitalRoot(19)); // 1
+  console.log(digitalRoot(3)); // 3
+  console.log(digitalRoot(327)); // 3
+  console.log(digitalRoot(98993)); // 2
 }

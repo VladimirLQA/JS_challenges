@@ -1,17 +1,16 @@
-
 // Create a counter function which has increment and getValue functionality
 
 function counter() {
-    let count = 0;
+  let count = 0;
 
-    return {
-        increment: ( value = 1) => {
-            count += value;
-        },
-        getValue: () => {
-            return count;
-        },
-    }
+  return {
+    increment: (value = 1) => {
+      count += value;
+    },
+    getValue: () => {
+      return count;
+    },
+  };
 }
 
 let c = counter();
@@ -22,8 +21,8 @@ c.increment();
 console.log(c.getValue());
 
 const privateSecret = () => {
-    const secret = 'foo';
-    return () => secret;
+  const secret = "foo";
+  return () => secret;
 };
 
 const getSecret = privateSecret();

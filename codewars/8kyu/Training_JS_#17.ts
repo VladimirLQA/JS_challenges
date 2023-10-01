@@ -11,23 +11,24 @@
 */
 
 {
-    function firstToLast(str: string, letter: string): number {
-        return str.indexOf(letter) < 0 ? -1 : str.lastIndexOf(letter) - str.indexOf(letter);
-    }
+  function firstToLast(str: string, letter: string): number {
+    return str.indexOf(letter) < 0 ? -1 : str.lastIndexOf(letter) - str.indexOf(letter);
+  }
 
-    console.log(firstToLast("ababc","a")); // 2
-    console.log(firstToLast("ababc","c")); // 0
-    console.log(firstToLast("ababc","d")); // -1
+  console.log(firstToLast("ababc", "a")); // 2
+  console.log(firstToLast("ababc", "c")); // 0
+  console.log(firstToLast("ababc", "d")); // -1
 }
 
 console.log(`============================================================`);
 
 {
-    function firstToLast(str: string, c: string): number {
-        if(!str.split('').includes(c)) return -1;
-        return str.lastIndexOf(c) - str.indexOf(c);
-    }
-    console.log(firstToLast("ababc","a")); // 2
-    console.log(firstToLast("ababc","c")); // 0
-    console.log(firstToLast("ababc","d")); // -1
+  function firstToLast(str: string, c: string): number {
+    if (!str.split("").includes(c)) return -1;
+    return str.lastIndexOf(c) - str.indexOf(c);
+  }
+
+  console.log(firstToLast("ababc", "a")); // 2
+  console.log(firstToLast("ababc", "c")); // 0
+  console.log(firstToLast("ababc", "d")); // -1
 }

@@ -11,12 +11,11 @@ Modify this example: remove all keys from initial collection literal and add all
     [[1, 2, true, false, 'a', 'b'], { 'number': 2, 'boolean': 2, string: 2 }]
 */
 
-
 const countTypesInArray = (array) => {
   const result = {};
   for (const item of array) {
     let type = typeof item;
-    result[type] ? result[type] += 1 : result[type] = 1;
+    result[type] ? (result[type] += 1) : (result[type] = 1);
   }
   return result;
 };

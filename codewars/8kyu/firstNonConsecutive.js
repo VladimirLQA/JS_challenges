@@ -12,35 +12,36 @@ could be either too!
 const log = console.log;
 
 {
-    function firstNonConsecutive(arr) {
-        for (let i = 0; i < arr.length - 1; i++) {
-            if (arr[i] + 1 !== arr[i + 1]) {
-                return arr[i + 1];
-            }
-        }
-        return null;
+  function firstNonConsecutive(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] + 1 !== arr[i + 1]) {
+        return arr[i + 1];
+      }
     }
+    return null;
+  }
 
-    log(firstNonConsecutive([1,2,3,4,6,7,8])); // 6
-    log(firstNonConsecutive([-3,-2,0,1,2])); // 0
-    log(firstNonConsecutive([1,2,3,4])); // null
+  log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])); // 6
+  log(firstNonConsecutive([-3, -2, 0, 1, 2])); // 0
+  log(firstNonConsecutive([1, 2, 3, 4])); // null
 }
-    log(`===========================================================`);
+log(`===========================================================`);
 {
-    function firstNonConsecutive(arr) {
-        const result = arr.find((number, index) => number !== index + arr[0]);
-        return Number.isInteger(result) ? result : null;
-    }
+  function firstNonConsecutive(arr) {
+    const result = arr.find((number, index) => number !== index + arr[0]);
+    return Number.isInteger(result) ? result : null;
+  }
 
-    log(firstNonConsecutive([1,2,3,4,6,7,8])); // 6
-    log(firstNonConsecutive([-3,-2,0,1,2])); // 0
-    log(firstNonConsecutive([1,2,3,4])); // null
+  log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])); // 6
+  log(firstNonConsecutive([-3, -2, 0, 1, 2])); // 0
+  log(firstNonConsecutive([1, 2, 3, 4])); // null
 }
-    log(`===========================================================`);
+log(`===========================================================`);
 {
-    firstNonConsecutive = arr => arr.length === 1 ? null : arr[0] + 1 !== arr[1] ? arr[1] : firstNonConsecutive(arr.slice(1));
+  firstNonConsecutive = (arr) =>
+    arr.length === 1 ? null : arr[0] + 1 !== arr[1] ? arr[1] : firstNonConsecutive(arr.slice(1));
 
-    log(firstNonConsecutive([1,2,3,4,6,7,8])); // 6
-    log(firstNonConsecutive([-3,-2,0,1,2])); // 0
-    log(firstNonConsecutive([1,2,3,4])); // null
+  log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])); // 6
+  log(firstNonConsecutive([-3, -2, 0, 1, 2])); // 0
+  log(firstNonConsecutive([1, 2, 3, 4])); // null
 }

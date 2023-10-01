@@ -1,6 +1,5 @@
 {
-  "extends": [
-    "prettier",
-    "metarhia"
-  ]
+  "extends": ["prettier", "metarhia"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser"
 }

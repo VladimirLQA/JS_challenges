@@ -1,18 +1,16 @@
 /*
-* "Ваша задача состоит в том, чтобы вернуть выходную строку, созданную из входной строки s ,
-* заменив каждый символ в s числом, представляющим количество раз,
-* которое этот символ встречается в s, и разделив каждое число символом(символами) sep."
-* */
-
+ * "Ваша задача состоит в том, чтобы вернуть выходную строку, созданную из входной строки s ,
+ * заменив каждый символ в s числом, представляющим количество раз,
+ * которое этот символ встречается в s, и разделив каждое число символом(символами) sep."
+ * */
 
 function freqSep(str, separator) {
-    return [...str.toLowerCase()].map((el, index, arr) =>
-        arr.filter(e => el === e).length).join(`${separator} `);
+  return [...str.toLowerCase()].map((el, index, arr) => arr.filter((e) => el === e).length).join(`${separator} `);
 }
 
-console.log(freqSep('Toster', ';'));
-console.log(freqSep('ffaanntazzzy', ';'));
-console.log(freqSep('aaaaaaaaaaa', ';'));
+console.log(freqSep("Toster", ";"));
+console.log(freqSep("ffaanntazzzy", ";"));
+console.log(freqSep("aaaaaaaaaaa", ";"));
 
 console.log(`================================================`);
 
@@ -31,30 +29,34 @@ console.log(`================================================`);
  */
 
 function returnWithoutGeese(arr) {
-    const geese = ["Африканка", "Римская хохлатая", "Тулуза", "Пилигрим", "Штайнбахер"];
-    return arr.filter(el => !geese.includes(el));
+  const geese = ["Африканка", "Римская хохлатая", "Тулуза", "Пилигрим", "Штайнбахер"];
+  return arr.filter((el) => !geese.includes(el));
 }
 
-console.log(returnWithoutGeese(["Кряква", "Крюк Билл", "Африканка", "Хохлатая", "Пилигрим", "Тулуза", "Синий шведский"]));
+console.log(
+  returnWithoutGeese(["Кряква", "Крюк Билл", "Африканка", "Хохлатая", "Пилигрим", "Тулуза", "Синий шведский"]),
+);
 
 console.log(`================================================`);
 
 /*
-* "Напишите программу, которая считывает целое положительное число n, 1 <= n <= 9, и выводит сумму равную
-* n + nn + nnn, где n не перемножаются, а конкатенируются
-* + усложнение - паттерн для суммирования также задается пользователем, между цифрами лишь простые
-* алгебраические знаки (- + . * )
-* например  pattern = '# + ### - ##',  function sum(n, pattern)."
-*/
+ * "Напишите программу, которая считывает целое положительное число n, 1 <= n <= 9, и выводит сумму равную
+ * n + nn + nnn, где n не перемножаются, а конкатенируются
+ * + усложнение - паттерн для суммирования также задается пользователем, между цифрами лишь простые
+ * алгебраические знаки (- + . * )
+ * например  pattern = '# + ### - ##',  function sum(n, pattern)."
+ */
 
 function generateConcatedNumber(number, numberOfRepeats) {
-    return +(''+number).repeat(numberOfRepeats);
+  return +("" + number).repeat(numberOfRepeats);
 }
 
 function getConcatedValue(number, pattern) {
-    return pattern
-        ? ''
-        :`${number} + ${generateConcatedNumber(number, 2)} + ${generateConcatedNumber(number, 3)} === ${number + generateConcatedNumber(number, 2) + generateConcatedNumber(number, 3)}`;
+  return pattern
+    ? ""
+    : `${number} + ${generateConcatedNumber(number, 2)} + ${generateConcatedNumber(number, 3)} === ${
+        number + generateConcatedNumber(number, 2) + generateConcatedNumber(number, 3)
+      }`;
 }
 
 console.log(getConcatedValue(1));

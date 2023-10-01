@@ -1,6 +1,5 @@
-
 function digitize(n: number): number[] {
-    return [...String(n)].map(v => +v).reverse();
+  return [...String(n)].map(v => +v).reverse();
 }
 
 console.log(digitize(23582357));

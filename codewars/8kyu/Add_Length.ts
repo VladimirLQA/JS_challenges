@@ -12,8 +12,8 @@ Your task is to write a function that takes a String and returns an Array/list
 Note: String will have at least one element; words will always be separated by a space.*/
 
 export function addLength(str: string): string[] {
-    return str.split(' ').map((el: string) => `${el} ${el.length}`);
+  return str.split(" ").map((el: string) => `${el} ${el.length}`);
 }
 
-console.log(addLength('apple ban'));
-console.log(addLength('you will win'));
+console.log(addLength("apple ban"));
+console.log(addLength("you will win"));
