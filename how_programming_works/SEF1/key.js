@@ -4,7 +4,8 @@ const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
   const generateKey = (length, characters) => {
     return Array.from(characters,
       (_) => characters[Math.floor(Math.random() * characters.length)])
-      .splice(0, length).join("");
+      .splice(0, length)
+      .join("");
   };
   const key = generateKey(16, characters);
   console.log(key); // eg599gb60q926j8i
