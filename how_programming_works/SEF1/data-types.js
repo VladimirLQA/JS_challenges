@@ -14,7 +14,7 @@ Modify this example: remove all keys from initial collection literal and add all
 const countTypesInArray = (array) => {
   const result = {};
   for (const item of array) {
-    let type = typeof item;
+    const type = typeof item;
     result[type] ? (result[type] += 1) : (result[type] = 1);
   }
   return result;
