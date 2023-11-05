@@ -39,3 +39,19 @@ console.log(`======================================================`);
   console.log(digitalRoot(327)); // 3
   console.log(digitalRoot(98993)); // 2
 }
+
+console.log(`======================================================`);
+
+{
+  function digitalRoot(n) {
+    if (n < 10) return n;
+    return digitalRoot(n.toString().split('').reduce((res, digit) => {
+      return res + +digit
+    }, 0));
+  }
+
+  console.log(digitalRoot(19)); // 1
+  console.log(digitalRoot(3)); // 3
+  console.log(digitalRoot(327)); // 3
+  console.log(digitalRoot(98993)); // 2
+}
