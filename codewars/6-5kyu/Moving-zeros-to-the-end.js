@@ -4,7 +4,7 @@
     return arr.sort((el1, el2) => el2 - el1);
   };
 
-  console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
 
 {
@@ -15,7 +15,7 @@
     });
   };
 
-  console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
 
 {
@@ -27,7 +27,7 @@
     });
   };
 
-  console.log(moveZeros([false, 1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
 
 {
@@ -35,13 +35,13 @@
   const isZero = element => element === 0;
   const moveZeros = arr => arr.filter(isNotZero).concat(arr.filter(isZero));
 
-  console.log(moveZeros([false, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
 
 {
   const moveZeros = arr => [...arr.filter(el => el !== 0), ...arr.filter(el => el === 0)];
 
-  console.log(moveZeros([false, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
 
 {
@@ -54,4 +54,6 @@
     }
     return arr;
   };
+
+  console.log(moveZeros([false, 2, 0, 1, 'a', 0, 1, 0, 3, 0, 1]));
 }
