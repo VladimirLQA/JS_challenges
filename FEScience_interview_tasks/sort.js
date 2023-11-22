@@ -34,9 +34,7 @@ const words = ["banana", "grapefruit", "banana",
       return acc;
     }, {});
 
-    const keys = Object.keys(hash);
-
-    return keys.sort((key1, key2) => {
+    return Object.keys(hash).sort((key1, key2) => {
       return hash[key2] - hash[key1];
     });
   };
