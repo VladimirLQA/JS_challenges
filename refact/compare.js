@@ -1,23 +1,54 @@
 // Compare two dictionaries
 
-const compare = (first_dictionary, second_dictionary) => {
+{
+  // For first lvl keys
+  const compare = (first_dictionary, second_dictionary) => {
     let keysFirstDictionary = Object.keys(first_dictionary);
     let keysSecondDictionary = Object.keys(second_dictionary);
-    if(keysFirstDictionary.length !== keysSecondDictionary)
-    return false;
 
-    if (a.join('-') !== b.join('-')) return false;
+    if (keysFirstDictionary.length !== keysSecondDictionary.length) return false;
 
-    for (let key of keysFirstDictionary ) {
-      if (first_dictionary[c] === second_dictionary[c]) result = true;
-      else result = false
+    if (keysFirstDictionary.join("-") !== keysSecondDictionary.join("-")) return false;
+
+    for (let key of keysFirstDictionary) {
+      if (!second_dictionary.hasOwnProperty(key) || first_dictionary[key] !== second_dictionary[key]) return false;
     }
-    return result;
+
+    return true;
+  };
+
+  console.log(compare({ a: 1, c: "hello" }, { c: "hello", a: 1 })); // false
 }
 
-console.log(compare({ a: 1, c: 'hello' }, { b: 1, c: 'hello' })) // false
+{
+  // For nested comparison
+  const comparevalues = (value1, value2) => {
+    if (typeof value1 === "object" && typeof value2 === "object") {
+      return compare(value1, value2);
+    }
+    return value1 === value2;
+  };
 
-  
+  const compare = (first_dictionary, second_dictionary) => {
+    const keysFirstDict = Object.keys(first_dictionary);
+    const keysSecondDict = Object.keys(second_dictionary);
+
+    if (keysFirstDict.length !== keysSecondDict.length) return false;
+
+    if (keysFirstDict.join("-") !== keysSecondDict.join("-")) return false;
+
+    for (const key of keysFirstDict) {
+      if(!second_dictionary.hasOwnProperty(key) || !comparevalues(first_dictionary[key], second_dictionary[key]))
+        return false;
+    }
+
+    return true;
+  };
+
+  console.log(compare({ a: 1, c: { nested: 'hello' } }, { a: 2, c: { nested: 'hello' } }));
+}
+
+
 //   const test = require('../test.js');
 
 //   const cases = [
