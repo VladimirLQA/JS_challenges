@@ -3,11 +3,6 @@
   "trailingComma": "all",
   "semi": true,
   "bracketSpacing": true,
-  "printWidth": 120,
-  "overrides": [
-    {
-      "files": ["**/.*rc", "**/*.json"],
-      "options": { "parser": "json" }
-    }
-  ]
+  "printWidth": 120
+  
 }
