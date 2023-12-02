@@ -33,26 +33,47 @@ Explanation: There are no elements to be chunked so an empty array is returned.
 const testArray = [1, 2, 3, 4, 5];
 
 {
-    const chunk = (array, size) => {
-        const chunkedArray = [];
-  
-        for (let i = 0; i < array.length; i += size) {
-            const chunk = array.slice(i, i + size);
-            chunkedArray.push(chunk);
-        }
-        return chunkedArray;
-    };
+  const chunk = (array, size) => {
+    const chunkedArray = [];
 
-    console.log(chunk(testArray, 1)); // [[1],[2],[3],[4],[5]]
+    for (let i = 0; i < array.length; i += size) {
+      const chunk = array.slice(i, i + size);
+      chunkedArray.push(chunk);
+    }
+    return chunkedArray;
+  };
+
+  console.log(chunk(testArray, 1)); // [[1],[2],[3],[4],[5]]
 }
 
 {
-    const chunk = (arr, size) => {
-        if (arr.length <= size) {
-            return [arr];
-        } else {
-            return [arr.slice(0, size), ...chunk(arr.slice(size), size)];
-        }
+  const chunk = (arr, size) => {
+    if (arr.length <= size) {
+      return [arr];
+    } else {
+      return [arr.slice(0, size), ...chunk(arr.slice(size), size)];
     }
-    console.log(chunk(testArray, 1)); // [[1],[2],[3],[4],[5]]
+  };
+  console.log(chunk(testArray, 1)); // [[1],[2],[3],[4],[5]]
+}
+
+{
+  const chunk = (arr, size) => {
+    const result = [];
+    if(!arr.length) return [];
+    if (arr.length < size) {
+      result.push([...arr]);
+      return result;
+    }
+    
+    for (let i = 0; i <= arr.length - size; i++) {
+      const chunk = [];
+      for (let j = i; j < i + size; j++) {
+        chunk.push(arr[j]);
+      }
+      result.push(chunk);
+    }
+    return result;
+  };
+  console.log(chunk(testArray, 6)); // [[1],[2],[3],[4],[5]]
 }
