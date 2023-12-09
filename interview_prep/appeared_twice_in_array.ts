@@ -16,24 +16,24 @@ Input: nums = [1];
 Output: []
 
 
-*/ 
+*/
 const testNums1 = [4, 3, 2, 7, 8, 2, 3, 1];
 const testNums2 = [1];
 
 type TempHash = Record<string, number>;
 
 {
-	const getElAppearedTwice = (array: number[]) => {
-		let hash: TempHash = array.reduce((acc: TempHash, currEl: number) => {
-			acc[currEl] = (acc[currEl] || 0) + 1;
-			return acc;
-		}, {});
+  const getElAppearedTwice = (array: number[]) => {
+    let hash: TempHash = array.reduce((acc: TempHash, currEl: number) => {
+      acc[currEl] = (acc[currEl] || 0) + 1;
+      return acc;
+    }, {});
 
-        return Object.keys(hash)
-        .filter((key) => hash[key] === 2)
-        .map(Number);
-	}
-    
-    console.log(getElAppearedTwice(testNums1));
-    console.log(getElAppearedTwice(testNums2));
+    return Object.keys(hash)
+      .filter((key) => hash[key] === 2)
+      .map(Number);
+  };
+
+  console.log(getElAppearedTwice(testNums1));
+  console.log(getElAppearedTwice(testNums2));
 }
