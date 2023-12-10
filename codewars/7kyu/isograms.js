@@ -25,7 +25,7 @@ Example: (Input --> Output)
 }
 
 {
-  const isIsogram = (s) => new Set(s.toLowerCase()).size === s.length;
+  const isIsogram = (s) => !s || new Set(s.toLowerCase()).size === s.length;
   console.log(isIsogram('Dermatoglyphics'));
   console.log(isIsogram('aba'));
   console.log(isIsogram('moOse'));
