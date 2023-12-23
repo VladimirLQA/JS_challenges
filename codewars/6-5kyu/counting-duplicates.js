@@ -13,23 +13,68 @@
  * "ABBA" -> 2 # 'A' and 'B' each occur twice
  */
 
-const duplicateCount = (str) => {
-  let count = 0;
-  const hash = [...str.toLowerCase()].reduce((hash, currItem) => {
-    hash[currItem] = (hash[currItem] || 0) + 1;
-    return hash;
-  }, {});
+{
+  const duplicateCount = (str) => {
+    let count = 0;
+    const hash = [...str.toLowerCase()].reduce((hash, currItem) => {
+      hash[currItem] = (hash[currItem] || 0) + 1;
+      return hash;
+    }, {});
 
-  for (const item in hash) {
-    if (hash[item] > 1) count++;
-  }
-  return count;
-};
+    for (const item in hash) {
+      if (hash[item] > 1) count++;
+    }
+    return count;
+  };
 
-console.log(duplicateCount('abcde'));
-console.log(duplicateCount('aabbcde'));
-console.log(duplicateCount('aabBcde'));
-console.log(duplicateCount('indivisibility'));
-console.log(duplicateCount('Indivisibilities'));
-console.log(duplicateCount('aA11'));
-console.log(duplicateCount('ABBA'));
+  console.log(duplicateCount('abcde'));
+  console.log(duplicateCount('aabbcde'));
+  console.log(duplicateCount('aabBcde'));
+  console.log(duplicateCount('indivisibility'));
+  console.log(duplicateCount('Indivisibilities'));
+  console.log(duplicateCount('aA11'));
+  console.log(duplicateCount('ABBA'));
+}
+console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+{
+  const duplicateCount = (text) =>
+    (
+      text
+        .toLowerCase()
+        .split('')
+        .sort()
+        .join('')
+        .match(/([^])\1+/g) || []
+    ).length;
+
+  console.log(duplicateCount('abcde'));
+  console.log(duplicateCount('aabbcde'));
+  console.log(duplicateCount('aabBcde'));
+  console.log(duplicateCount('indivisibility'));
+  console.log(duplicateCount('Indivisibilities'));
+  console.log(duplicateCount('aA11'));
+  console.log(duplicateCount('ABBA'));
+}
+console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+{
+  const duplicateCount = (text) =>
+    text
+      .toLowerCase()
+      .split('')
+      .reduce(
+        (resObj, currItem) => {
+          resObj[currItem] = resObj[currItem] ? resObj[currItem] + 1 : 1;
+          if (resObj[currItem] === 2) resObj.count++;
+          return resObj;
+        },
+        { count: 0 },
+      ).count;
+
+  console.log(duplicateCount('abcde'));
+  console.log(duplicateCount('aabbcde'));
+  console.log(duplicateCount('aabBcde'));
+  console.log(duplicateCount('indivisibility'));
+  console.log(duplicateCount('Indivisibilities'));
+  console.log(duplicateCount('aA11'));
+  console.log(duplicateCount('ABBA'));
+}
