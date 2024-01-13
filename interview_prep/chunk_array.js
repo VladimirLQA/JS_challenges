@@ -34,8 +34,9 @@ const testArray = [1, 2, 3, 4, 5];
 
 {
   const chunk = (array, size) => {
-    const chunkedArray = [];
+    if (arr.length <= size) return [arr];
 
+    const chunkedArray = [];
     for (let i = 0; i < array.length; i += size) {
       const chunk = array.slice(i, i + size);
       chunkedArray.push(chunk);
@@ -60,12 +61,11 @@ const testArray = [1, 2, 3, 4, 5];
 {
   const chunk = (arr, size) => {
     const result = [];
-    if(!arr.length) return [];
-    if (arr.length < size) {
-      result.push([...arr]);
-      return result;
+    if (!arr.length) return [];
+    if (arr.length <= size) {
+      return [arr];
     }
-    
+
     for (let i = 0; i <= arr.length - size; i++) {
       const chunk = [];
       for (let j = i; j < i + size; j++) {
@@ -75,5 +75,5 @@ const testArray = [1, 2, 3, 4, 5];
     }
     return result;
   };
-  console.log(chunk(testArray, 6)); // [[1],[2],[3],[4],[5]]
+  console.log(chunk(testArray, 5)); // [[1],[2],[3],[4],[5]]
 }
