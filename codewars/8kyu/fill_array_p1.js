@@ -5,7 +5,7 @@
 
 {
   const arr = (n) => {
-    if (!n) return Array(1);
+    if (!n) return [];
     let result = [];
     for (let i = 0; i <= n - 1; i++) {
       result.push(i);
