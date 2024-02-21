@@ -34,7 +34,7 @@ const testArray = [1, 2, 3, 4, 5];
 
 {
   const chunk = (array, size) => {
-    if (arr.length <= size) return [arr];
+    if (array.length <= size) return [array];
 
     const chunkedArray = [];
     for (let i = 0; i < array.length; i += size) {
@@ -75,5 +75,5 @@ const testArray = [1, 2, 3, 4, 5];
     }
     return result;
   };
-  console.log(chunk(testArray, 5)); // [[1],[2],[3],[4],[5]]
+  console.log(chunk(testArray, 1)); // [[1],[2],[3],[4],[5]]
 }
