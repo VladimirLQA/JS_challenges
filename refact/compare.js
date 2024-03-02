@@ -22,7 +22,7 @@
 
 {
   // For nested comparison
-  const comparevalues = (value1, value2) => {
+  const compareValues = (value1, value2) => {
     if (typeof value1 === "object" && typeof value2 === "object") {
       return compare(value1, value2);
     }
@@ -38,25 +38,13 @@
     if (keysFirstDict.join("-") !== keysSecondDict.join("-")) return false;
 
     for (const key of keysFirstDict) {
-      if(!second_dictionary.hasOwnProperty(key) || !comparevalues(first_dictionary[key], second_dictionary[key]))
+      if(!second_dictionary.hasOwnProperty(key) || !compareValues(first_dictionary[key], second_dictionary[key]))
         return false;
     }
 
     return true;
   };
 
-  console.log(compare({ a: 1, c: { nested: 'hello' } }, { a: 2, c: { nested: 'hello' } }));
+  console.log(compare({ a: 1, c: { nested: 'hello' } }, { a: 2, c: { nested: 'hello' } })); // false
 }
 
-
-//   const test = require('../test.js');
-
-//   const cases = [
-//     [[{ a: 1, c: 'hello' }, { a: 1, c: 'hello' }], true],
-//     [[{ a: 1, c: 'hello' }, { a: 2, c: 'hello' }], false],
-//     [[{ a: 2, c: 'hello' }, { a: 1, c: 'hello' }], false],
-//     [[{ a: 1, c: 'helo' }, { a: 1, c: 'hello' }], false],
-//     [[{ a: 1, c: 'hello' }, { a: 1, c: 'helo' }], false],
-//     [[{ c: 'hello', a: 1 }, { a: 1, c: 'hello' }], false],
-//     [[{ a: 1, c: 'hello' }, { c: 'hello', a: 1 }], false],
-//   ];
