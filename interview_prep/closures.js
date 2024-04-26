@@ -6,14 +6,14 @@ function counter() {
   return {
     increment: (value = 1) => {
       count += value;
-    },
-    getValue: () => {
       return count;
     },
+
+    getValue: () => count,
   };
 }
 
-let c = counter();
+const c = counter();
 
 console.log(c.getValue());
 c.increment(2);
@@ -21,7 +21,7 @@ c.increment();
 console.log(c.getValue());
 
 const privateSecret = () => {
-  const secret = "foo";
+  const secret = 'foo';
   return () => secret;
 };
 
