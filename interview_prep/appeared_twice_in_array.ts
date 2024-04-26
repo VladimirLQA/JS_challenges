@@ -1,22 +1,17 @@
-/* 
+/* Given an integer array nums of length n where all the integers of nums are
+integers in the range [1, n] and each integer appears once or twice,
+return an array of allthe integers athat appears twice */
 
-Given an integer array nums of length n where all the integers of nums are integers
-in the range [1, n] and each integer appears once or twice, return an array of all 
-the integers athat appears twice
-
-*/
-
-/* 
-Example 1: 
+/*
+Example 1:
 Input: nums = [4, 3, 2, 7, 8, 2, 3, 1];
 Output: [2, 3]
 
-Example 2: 
+Example 2:
 Input: nums = [1];
 Output: []
-
-
 */
+
 const testNums1 = [4, 3, 2, 7, 8, 2, 3, 1];
 const testNums2 = [1];
 
@@ -24,7 +19,7 @@ type TempHash = Record<string, number>;
 
 {
   const getElAppearedTwice = (array: number[]) => {
-    let hash: TempHash = array.reduce((acc: TempHash, currEl: number) => {
+    const hash: TempHash = array.reduce((acc: TempHash, currEl: number) => {
       acc[currEl] = (acc[currEl] || 0) + 1;
       return acc;
     }, {});

@@ -1,4 +1,4 @@
-// Write a function which get's an array and an element and returns
+// Write a function which gets an array and an element and returns
 // an array with this element at the end
 
 const testArray = [1, 2, 3, 4];
@@ -8,13 +8,12 @@ const toTheEnd = (arr, element) => [...arr, element];
 // const arrayCopy = [].concat(arr);
 // const arrayCopy = Array.from(arr);
 
-
-console.log(toTheEnd(testArray, "el"));
+console.log(toTheEnd(testArray, 'el'));
 console.log(testArray);
 
 // Write a function which can concatenate 2 arrays
 
-const testArray2 = ["1", "2", "3", "4"];
+const testArray2 = ['1', '2', '3', '4'];
 
 const concatArrays = (arr1, arr2) => [...arr1, ...arr2];
 
@@ -30,11 +29,9 @@ const duplicates = [1, 2, 2, 3, 4, 4];
 }
 
 {
-  const removeDuplicates = (array) => {
-    return array.reduce((result, el) => {
-      return result.includes(el) ? result : [...result, el];
-    }, []);
-  };
+  const removeDuplicates = (array) =>
+    array.reduce((result, el) => result.includes(el)
+      ? result : [...result, el], []);
 
   console.log(removeDuplicates(duplicates));
 }
@@ -42,9 +39,9 @@ const duplicates = [1, 2, 2, 3, 4, 4];
 // Sort array of objects by author's lastname
 
 const books = [
-  { name: "Warcross", author: "Marie Lu" },
-  { name: "Harry Potter", author: "Joanne Rowling" },
-  { name: "The Hunger Games", author: "Suzanne Collins" },
+  { name: 'Warcross', author: 'Marie Lu' },
+  { name: 'Harry Potter', author: 'Joanne Rowling' },
+  { name: 'The Hunger Games', author: 'Suzanne Collins' },
 ];
 
 books.sort((book1, book2) => {
