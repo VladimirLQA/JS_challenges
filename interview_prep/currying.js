@@ -3,12 +3,8 @@
 
 const multiply = (a) => (b) => a * b;
 
-const multiplyOption = (num1) => (num2) => num1 * num2;
-
 const result = multiply(3)(4);
-const resultOp = multiplyOption(3)(4);
 console.log('Result of first multiply', result);
-console.log('Result of second multiply', resultOp);
 
 // Create a curry function
 const curry = (fn) => {
@@ -44,3 +40,22 @@ console.log('Map with getId', map(getId, [{ id: 1 }]));
 
 const getIds = map(getId());
 console.log('GetIds', getIds([{ id: 2 }]));
+
+{
+  const curry = (fn, length = fn.length) => (...args) => {
+    if (args.length < length) {
+      return curry((...moreArgs) => fn(...args, ...moreArgs),
+        length - args.length);
+    }
+    return fn(...args);
+  };
+
+  const sum = (a, b, c) => a + b + c;
+  const curriedSum = curry(sum);
+  const partiallyCurriedSum = curriedSum(3);
+
+  console.log(curriedSum(1)(2, 3));
+  console.log(curriedSum(1, 2)(3));
+  console.log(partiallyCurriedSum(2)(3));
+  console.log(partiallyCurriedSum(3, 3));
+}
