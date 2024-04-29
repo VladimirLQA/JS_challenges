@@ -1,8 +1,19 @@
 {
-  "extends": ["prettier", "metarhia"],
-  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "prettier",
+    "metarhia"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "parser": "@typescript-eslint/parser",
   "rules": {
-    "strict": "off"
+    "strict": "off",
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true
+      }
+    ]
   }
 }
