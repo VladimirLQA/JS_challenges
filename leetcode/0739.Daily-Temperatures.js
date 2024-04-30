@@ -37,3 +37,21 @@ const dailyTemperatures = (days) => {
 };
 
 console.log(dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73])); // [1,1,4,2,1,1,0,0]
+
+const dailyTemperatures2 = (days) => {
+  const result = new Array(days.length).fill(0);
+  const stack = [];
+
+  for (let i = 0; i < days.length; i++) {
+    while (stack.length && days[i] > days[stack[stack.length - 1]]) {
+      const top = stack.pop();
+      result[top] = i - top;
+    }
+    stack.push(i);
+    console.log(`stack ${i} ~ ${stack}`);
+  }
+
+  return result;
+};
+
+console.log(dailyTemperatures2([73, 74, 75, 71, 69, 72, 76, 73, 77])); // [1,1,4,2,1,1,0,0]
