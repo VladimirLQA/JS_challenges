@@ -33,5 +33,16 @@
   console.log(getDuplicates([1, 2, 3, 4, 1, 3]));
 }
 
+{
+  const getDuplicates = (nums) =>
+    nums.filter((el, idx) => nums.indexOf(el) !== idx);
 
+  console.log(getDuplicates([1, 2, 3, 4, 1, 3]));
+}
 
+{
+  const getDuplicates = (nums) =>
+    [...new Set(nums.filter((el) => nums.filter((n) => n === el).length > 1))];
+
+  console.log(getDuplicates([1, 2, 3, 4, 1, 3]));
+}
