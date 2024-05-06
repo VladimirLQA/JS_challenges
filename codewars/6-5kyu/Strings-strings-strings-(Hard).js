@@ -1,12 +1,5 @@
-const stringifyArray = (arr) => {
-  return '[' + arr.map(item =>
-    (typeof item === 'string' ? `'${item}'` : item)).join(',') + ']';
-
-};
-
 Array.prototype.toString = function() {
-  if (Array.isArray(this)) return stringifyArray(this);
-  return String(this);
+  return '[' + this.map((item) => (typeof item === 'string' ? `'${item}'` : item)).join(',') + ']';
 };
 
 console.log([1, 2, [3, 4], [5, 6], [[7]], [8, [9]]].toString());
