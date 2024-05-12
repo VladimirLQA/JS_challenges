@@ -2,7 +2,7 @@ const pairOfTargetSum = (arr, target) => {
   const pair = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
-      let tempSum = arr[i] + arr[j];
+      const tempSum = arr[i] + arr[j];
       if (tempSum === target) {
         pair.push(arr[i], arr[j]);
         return pair;
@@ -19,7 +19,7 @@ console.log(pairOfTargetSum([1, 2, 3, 4, 5], 7));
 const pairOfTargetSum2 = (arr, target) => {
   const numSet = new Set();
 
-  for (let num of arr) {
+  for (const num of arr) {
     const complement = target - num;
     if (numSet.has(complement)) {
       return [complement, num];

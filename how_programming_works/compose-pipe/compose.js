@@ -1,5 +1,6 @@
 const compose = (...fns) => {
   const handlers = [];
+  // eslint-disable-next-line consistent-return
   const composed = (x) => {
     if (fns.length === 0) return x;
 
