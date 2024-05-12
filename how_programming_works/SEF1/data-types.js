@@ -15,11 +15,11 @@ const countTypesInArray = (array) => {
   const result = {};
   for (const item of array) {
     const type = typeof item;
-    result[type] ? (result[type] += 1) : (result[type] = 1);
+    result[type] ? result[type] += 1 : result[type] = 1;
   }
   return result;
 };
 
 console.log(countTypesInArray([true, true, false]));
-console.log(countTypesInArray([1, true, "hello"]));
-console.log(countTypesInArray([1, 2, true, false, "a", "b"]));
+console.log(countTypesInArray([1, true, 'hello']));
+console.log(countTypesInArray([1, 2, true, false, 'a', 'b']));

@@ -31,11 +31,11 @@ Implement function rangeOdd(start: number, end: number) returning array with all
     [2, -1, []],
   ]*/
 
-console.log("range");
+console.log('range');
 const range = (start, end) => {
   const len = Math.ceil(end - start);
   if (len < 0) return [];
-  let result = [];
+  const result = [];
   for (let i = start; i <= end; i++) {
     result.push(i);
   }
@@ -47,11 +47,11 @@ console.log(range(7, 5));
 console.log(range(-1, -1));
 console.log(range(-3, -1));
 
-console.log("rangeOdd");
+console.log('rangeOdd');
 const rangeOdd = (start, end) => {
   const len = Math.ceil(end - start);
   if (len < 0) return [];
-  let result = [];
+  const result = [];
   for (let i = start; i <= end; i++) {
     if (i % 2 !== 0) {
       result.push(i);

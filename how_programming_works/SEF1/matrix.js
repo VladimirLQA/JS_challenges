@@ -15,5 +15,4 @@ const max = (matrix) => {
   return max;
 };
 
-
 console.log(max(twoDimensionalArr)); // 9
