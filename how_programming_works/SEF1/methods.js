@@ -24,9 +24,10 @@ const toExtract = {
   },
 };
 
-const methods = (iface) => Object.entries(iface).map((entry) => {
-  const [fName, fArgsQuantity] = entry;
-  return [fName, fArgsQuantity.length];
-});
+const methods = (iface) =>
+  Object.entries(iface).map((entry) => {
+    const [fName, fArgsQuantity] = entry;
+    return [fName, fArgsQuantity.length];
+  });
 
 console.log(methods(toExtract));
