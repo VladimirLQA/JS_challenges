@@ -12,32 +12,34 @@ const romanToIntegers = {
   const romanToInt = (str) => {
     let total = 0;
 
-
     for (let i = 0; i < str.length; i++) {
-      let curr = str[i];
-      let next = str[i + 1];
+      const curr = str[i];
+      const next = str[i + 1];
 
-      if (romanToIntegers[curr] < romanToIntegers[next]) total -= romanToIntegers[curr];
-      else total += romanToIntegers[curr];
+      if (romanToIntegers[curr] < romanToIntegers[next]) {
+        total -= romanToIntegers[curr];
+      } else {
+        total += romanToIntegers[curr];
+      }
     }
 
     return total;
   };
 
-  console.log(romanToInt("MCMXCIV"));
+  console.log(romanToInt('MCMXCIV'));
 }
 
 {
-  const romanToInt = (str) => {
+  const romanToInt = (str) => str.split('').reduce((total, curr, idx) => {
+    const next = str[idx + 1];
 
-    return str.split('').reduce((total, curr, idx) => {
-      const next = str[idx + 1];
+    if (romanToIntegers[curr] < romanToIntegers[next]) {
+      total -= romanToIntegers[curr];
+    } else {
+      total += romanToIntegers[curr];
+    }
+    return total;
+  }, 0);
 
-      if(romanToIntegers[curr] < romanToIntegers[next]) total -= romanToIntegers[curr];
-      else total += romanToIntegers[curr];
-      return total;
-    }, 0);
-  }
-
-  console.log(romanToInt("MCMXCIV"));
+  console.log(romanToInt('MCMXCIV'));
 }
