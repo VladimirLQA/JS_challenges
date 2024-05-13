@@ -1,12 +1,12 @@
-const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 {
-  const generateKey = (length, characters) => {
-    return Array.from(characters,
+  const generateKey = (length, characters) =>
+    Array.from(characters,
       (_) => characters[Math.floor(Math.random() * characters.length)])
       .splice(0, length)
-      .join("");
-  };
+      .join('');
+
   const key = generateKey(16, characters);
   console.log(key); // eg599gb60q926j8i
 }
