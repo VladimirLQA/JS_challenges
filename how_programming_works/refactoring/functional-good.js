@@ -5,11 +5,12 @@ const filePath = path.resolve(__dirname, 'cities.csv');
 
 const compose =
   (...funcs) =>
-  (x) =>
-    funcs.reduce((x, fn) => fn(x), x);
+    (x) =>
+      funcs.reduce((x, fn) => fn(x), x);
 const proportion = (max, val) => Math.round((val * 100) / max);
 
-const cellPad = (i, str, width) => (i ? str.padStart(width) : str.padEnd(width));
+const cellPad = (i, str, width) =>
+  (i ? str.padStart(width) : str.padEnd(width));
 const cellWIdth = (i) => [18, 10, 8, 8, 18, 6][i];
 
 const renderCell = (cell, i) => cellPad(i, cell + '', cellWIdth(i));
