@@ -7,7 +7,9 @@
 
 {
   const descendingOrder = (num) => {
-    if (typeof num !== 'number' || num < 0) return `Input value should be integer and greater or equal than '0'`;
+    if (typeof num !== 'number' || num < 0) {
+      return `Input value should be integer and greater or equal than '0'`;
+    }
 
     return +num
       .toString()
