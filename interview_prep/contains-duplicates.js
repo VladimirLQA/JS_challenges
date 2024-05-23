@@ -1,7 +1,6 @@
 {
-  const containsDuplicates = (arr) => {
-    return [...new Set(arr)].length !== arr.length;
-  };
+  const containsDuplicates = (arr) =>
+    [...new Set(arr)].length !== arr.length;
 
   console.log(containsDuplicates([1, 2, 3, 1]));
   console.log(containsDuplicates([1, 2, 3]));

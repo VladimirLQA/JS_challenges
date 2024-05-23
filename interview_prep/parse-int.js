@@ -26,8 +26,8 @@
     }
 
     for (let i = 0; i < value.length; i++) {
-      let currentValue = value.charAt(i);
-      let num = strToIntObj[currentValue];
+      const currentValue = value.charAt(i);
+      const num = strToIntObj[currentValue];
 
       if (num === undefined) {
         break;
