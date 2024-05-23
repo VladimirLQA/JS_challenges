@@ -11,16 +11,17 @@
  * @return boolean
  */
 
-function isDiscountEligible(cartTotal: number, isPremiumMember: boolean): boolean {
-    return cartTotal >= 50 || isPremiumMember;
-}
+const isDiscountEligible =
+  (cartTotal: number, isPremiumMember: boolean): boolean =>
+    cartTotal >= 50 || isPremiumMember;
+
 
 console.log(isDiscountEligible(40, false));
 console.log(isDiscountEligible(50, false));
 console.log(isDiscountEligible(40, true));
 console.log(isDiscountEligible(55, true));
 
-console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
 
 /*
 * Task 3: Event Registration
@@ -38,9 +39,9 @@ console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  */
 
 function isEventEligible(age: number, isTeenEvent: boolean): boolean {
-    if (age < 13) return false;
-    if (age >= 18 && !isTeenEvent) return true;
-    return age >= 13 && age <= 17 && isTeenEvent;
+  if (age < 13) return false;
+  if (age >= 18 && !isTeenEvent) return true;
+  return age >= 13 && age <= 17 && isTeenEvent;
 }
 
 /*
@@ -61,27 +62,30 @@ function isEventEligible(age: number, isTeenEvent: boolean): boolean {
  * @return boolean
  */
 
-type Access = "regular" | "supervisor" | "administrator";
+type Access = 'regular' | 'supervisor' | 'administrator';
 
-function hasAccess(userAccess: Access, requiredAccess: Access, isAreaSecure: boolean): boolean {
+const hasAccess =
+  (userAccess: Access, requiredAccess: Access, isAreaSecure: boolean):
+    boolean => {
     if (!isAreaSecure) {
-        return false;
+      return false;
     } else {
-        const access = ["regular", "supervisor", "administrator"];
-        const userAccessLevel = access.findIndex((value => value === userAccess));
-        const requiredAccessLevel = access.findIndex((value => value === userAccess));
-        if (userAccessLevel == -1 || requiredAccessLevel == -1) {
-            throw new Error("You don't have the needed access");
-        }
-        return userAccessLevel >= requiredAccessLevel;
+      const access = ['regular', 'supervisor', 'administrator'];
+      const userAccessLevel = access.findIndex((value) => value === userAccess);
+      const requiredAccessLevel =
+        access.findIndex((value) => value === userAccess);
+      if (userAccessLevel === -1 || requiredAccessLevel === -1) {
+        throw new Error('You don\'t have the needed access');
+      }
+      return userAccessLevel >= requiredAccessLevel;
     }
-}
+  };
 
-console.log(hasAccess("regular", "supervisor", true));
-console.log(hasAccess("administrator", "supervisor", true));
-console.log(hasAccess("regular", "administrator", false));
+console.log(hasAccess('regular', 'supervisor', true));
+console.log(hasAccess('administrator', 'supervisor', true));
+console.log(hasAccess('regular', 'administrator', false));
 
-console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
 
 /*
 * Task 4: Vacation Approval System
@@ -102,12 +106,16 @@ console.log(`<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  * @return boolean
  */
 
-function isVacationApproved(requestingEmployee: string, isManager: boolean, vacationDays: number, teamSize: number): boolean {
-    if (!requestingEmployee) throw new Error("Name was not provided");
+const isVacationApproved =
+  (requestingEmployee: string, isManager: boolean,
+    vacationDays: number, teamSize: number):
+    // eslint-disable-next-line consistent-return
+    boolean => {
+    if (!requestingEmployee) throw new Error('Name was not provided');
     if (isManager) return true;
     if (teamSize > 5 && vacationDays > 10) {
-        return false
+      return false;
     } else if (teamSize <= 5 && vacationDays <= 5) {
-        return true;
+      return true;
     }
-}
+  };

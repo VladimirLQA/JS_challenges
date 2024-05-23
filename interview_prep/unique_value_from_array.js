@@ -28,7 +28,7 @@ const testArray = [1, 1, 2, 3, 3, 3, 4, 5, 5, 7, 8, 9, 9];
       return acc;
     }, {});
 
-    Object.keys(hash).map((el) => {
+    Object.keys(hash).forEach((el) => {
       if (hash[el] === 1) result.push(el);
     });
     return result;

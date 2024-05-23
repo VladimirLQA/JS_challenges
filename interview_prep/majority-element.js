@@ -27,7 +27,11 @@
     const majorityCount = Math.floor(nums.length / 2);
 
     for (const num of nums) {
-      if (!hashTable[num]) hashTable[num] = 1; else hashTable[num]++;
+      if (!hashTable[num]) {
+        hashTable[num] = 1;
+      } else {
+        hashTable[num]++;
+      }
 
       if (hashTable[num] > majorityCount) return num;
     }

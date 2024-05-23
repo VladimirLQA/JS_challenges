@@ -28,7 +28,6 @@ console.log('1. Write code to get array of names from given array of users');
       return arrayOfNames;
     }, []);
 
-
   console.log(getUserNames(users));
 
   const names = users.map((user) => user.name);
