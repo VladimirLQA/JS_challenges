@@ -63,3 +63,18 @@ const alphabet = {
 
   console.log(getAlphabetPos(`The sunset sets at twelve o' clock.`));
 }
+
+{
+  const getAlphabetPos = (str, idx = 0, result = []) => {
+    if (idx >= str.length) return result.join(' ');
+
+    const code = str[idx].toLowerCase().charCodeAt(0);
+    if (code >= 97 && code <= 127) {
+      result.push(code - 96);
+    }
+
+    return getAlphabetPos(str, idx + 1, result);
+  };
+
+  console.log(getAlphabetPos(`The sunset sets at twelve o' clock.`));
+}
