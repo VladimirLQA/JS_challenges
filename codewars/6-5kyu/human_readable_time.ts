@@ -1,24 +1,25 @@
+/* eslint-disable no-inner-declarations */
 /*
-* Write a function, which takes a non-negative integer (seconds)
-* as input and returns the time in a human-readable format (HH:MM:SS)
-* HH = hours, padded to 2 digits, range: 00 - 99
-* MM = minutes, padded to 2 digits, range: 00 - 59
-* SS = seconds, padded to 2 digits, range: 00 - 59
-* The maximum time never exceeds 359999 (99:59:59)
-*/
+ * Write a function, which takes a non-negative integer (seconds)
+ * as input and returns the time in a human-readable format (HH:MM:SS)
+ * HH = hours, padded to 2 digits, range: 00 - 99
+ * MM = minutes, padded to 2 digits, range: 00 - 59
+ * SS = seconds, padded to 2 digits, range: 00 - 59
+ * The maximum time never exceeds 359999 (99:59:59)
+ */
 
 {
   function formatting(numVal: number): string {
-    return numVal.toString().padStart(2, "0");
+    return numVal.toString().padStart(2, '0');
   }
 
   function humanReadable(seconds: number): string {
-    let hh = Math.floor(seconds / 3600);
-    let mm = Math.floor(seconds / 60) % 60;
-    let ss = seconds % 60;
+    const hh = Math.floor(seconds / 3600);
+    const mm = Math.floor(seconds / 60) % 60;
+    const ss = seconds % 60;
     // return `${formatting(hh)}:${formatting(mm)}:${formatting(ss)}`;
 
-    return [hh, mm, ss].map((num) => String(num).padStart(2, "0")).join(":");
+    return [hh, mm, ss].map((num) => String(num).padStart(2, '0')).join(':');
   }
 
   console.log(humanReadable(0)); // '00:00:00'

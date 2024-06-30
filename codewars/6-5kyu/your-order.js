@@ -13,7 +13,7 @@
   const order = (str) => {
     if (!str.length) return str;
     const splittedStr = str.split(' ');
-    let result = [];
+    const result = [];
 
     splittedStr.forEach((word) => {
       word.split('').forEach((char) => {

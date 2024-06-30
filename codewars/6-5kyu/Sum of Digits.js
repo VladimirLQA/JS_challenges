@@ -1,12 +1,13 @@
+/* eslint-disable no-inner-declarations */
 /*
- * Given n, take the sum of the digits of n. 
- * If that value has more than one digit, continue reducing in this way until 
- * a single-digit number is produced. 
+ * Given n, take the sum of the digits of n.
+ * If that value has more than one digit, continue reducing in this way until
+ * a single-digit number is produced.
  * The input will be a non-negative integer.
- * 
+ *
     16  -->  1 + 6 = 7
     942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
- * 
+ *
  */
 
 {
@@ -15,7 +16,7 @@
     while (sum > 9) {
       sum = sum
         .toString()
-        .split("")
+        .split('')
         .reduce((prev, current) => +prev + +current);
     }
     return console.log(sum);
@@ -45,9 +46,8 @@ console.log(`======================================================`);
 {
   function digitalRoot(n) {
     if (n < 10) return n;
-    return digitalRoot(n.toString().split('').reduce((res, digit) => {
-      return res + +digit
-    }, 0));
+    return digitalRoot(n.toString().split('').reduce((res, digit) =>
+      res + +digit, 0));
   }
 
   console.log(digitalRoot(19)); // 1
