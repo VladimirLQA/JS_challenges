@@ -24,5 +24,14 @@ const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
   console.log(key); // eg599gb60q926j8i
 }
 
+{
+  const generateKey = (length, possible) =>
+    [...possible].reduce((key, _char, _, array) =>
+      (key += array[Math.floor(Math.random() * possible.length)]), '')
+      .slice(0, length);
+
+  console.log(generateKey(16, characters));
+}
+
 
 
