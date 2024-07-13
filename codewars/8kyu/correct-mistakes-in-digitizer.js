@@ -18,12 +18,18 @@
 
   console.log(correct('015'));
 }
+const replacement = {
+  0: 'O', 1: 'I', 5: 'S',
+};
 
 {
-  const replacement = {
-    0: 'O', 1: 'I', 5: 'S',
-  };
   const correct = (s) => s.replace(/[051]/g, (r) => replacement[r]);
+  console.log(correct('015'));
+}
+
+{
+  const correct = (s) =>
+    [...s].map((char) => replacement[char] || char).join('');
 
   console.log(correct('015'));
 }
