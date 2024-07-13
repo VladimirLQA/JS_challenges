@@ -7,11 +7,11 @@
 function some(a, b) {
   let result;
   if (b === "string" || b === "number" || b === "boolean") {
-    if (b === "string") {
+    if (b === 'string') {
       result = a.toString();
-    } else if (b === "number") {
+    } else if (b === 'number') {
       result = a;
-    } else if (b === "boolean") {
+    } else if (b === 'boolean') {
       result = Boolean(a);
     }
   } else {
@@ -20,12 +20,14 @@ function some(a, b) {
   return result;
 }
 
-console.log(some(1, "string"));
-console.log(some("dfd", "number"));
-console.log(some(1, "boolean"));
-console.log(some(1, "dfs"));
+console.log(some(1, 'string'));
+console.log(some('dfd', 'number'));
+console.log(some(1, 'boolean'));
+console.log(some(1, 'dfs'));
 
-console.log(`======================================================================`);
+console.log(
+  `======================================================================`,
+);
 
 /*
  * написать функцию которая принимает на вход строку и заменяет каждую букву на её порядковый номер в алфавите,
@@ -35,22 +37,26 @@ console.log(`===================================================================
 
 function name(string) {
   if (!string) {
-    return new Error("Empty string");
+    return new Error('Empty string');
   }
-  let alphabet = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z".split(",");
+  let alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'.split(
+    ',',
+  );
   let result = string
     .toLowerCase()
-    .split("")
+    .split('')
     .map((char) => {
       return alphabet.indexOf(char) + 1;
     });
 
-  return result.join(",");
+  return result.join(',');
 }
-console.log(name("ababa"));
-console.log(name("jkhuifugy"));
+console.log(name('ababa'));
+console.log(name('jkhuifugy'));
 
-console.log(`======================================================================`);
+console.log(
+  `======================================================================`,
+);
 
 /*
  * написать функцию которая принимает на вход строку где каждое слово содержит цифру от 1 до 9,
@@ -60,17 +66,17 @@ console.log(`===================================================================
  */
 
 function sort(string) {
-  let result = string.split(" ");
+  let result = string.split(' ');
   let newArr = [];
   result.forEach((word) => {
-    let chars = word.split("");
+    let chars = word.split('');
     chars.forEach((char) => {
       if (+char) {
         newArr[+char - 1] = word;
       }
     });
   });
-  return console.log(newArr.join(" "));
+  return console.log(newArr.join(' '));
 }
 
-sort("4of Fo1r pe6ople g3ood th5e the2");
+sort('4of Fo1r pe6ople g3ood th5e the2');
