@@ -1,7 +1,8 @@
 {
   const findDifference = (a, b) =>
     Math.abs(
-      a.reduce((cub, aValue) => (cub *= aValue), 1) - b.reduce((cub, bValue) => (cub *= bValue), 1),
+      a.reduce((cub, aValue) => (cub *= aValue), 1) -
+        b.reduce((cub, bValue) => (cub *= bValue), 1),
     );
 
   console.log(findDifference([3, 2, 5], [1, 4, 4])); // 14

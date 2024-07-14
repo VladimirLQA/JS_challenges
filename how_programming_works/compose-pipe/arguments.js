@@ -1,10 +1,16 @@
 'use strict';
 
 // TODO compose invokes funcs from right to left
-const compose = (f, g) => (...args) => f(g(...args));
+const compose =
+  (f, g) =>
+    (...args) =>
+      f(g(...args));
 
 // TODO pipe invokes funcs from left to right
-const pipe = (f, g) => (...args) => g(f(...args));
+const pipe =
+  (f, g) =>
+    (...args) =>
+      g(f(...args));
 
 // Usage
 

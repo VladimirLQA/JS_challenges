@@ -18,24 +18,45 @@
  */
 
 const comfortableWord = (word) => {
-  const left = "q, w, e, r, t, a, s, d, f, g, z, x, c, v, b".split(", ");
-  const right = "y, u, i, o, p, h, j, k, l, n, m".split(", ");
+  const left = 'q, w, e, r, t, a, s, d, f, g, z, x, c, v, b'.split(', ');
+  const right = 'y, u, i, o, p, h, j, k, l, n, m'.split(', ');
 
-  let isComfortable = [...word].map((e, i) => (i % 2 ? right.includes(e) : left.includes(e)));
-  return isComfortable.every((el) => el === true) || isComfortable.every((el) => el === false);
+  const isComfortable = [...word].map((e, i) =>
+    i % 2 ? right.includes(e) : left.includes(e),
+  );
+  return (
+    isComfortable.every((el) => el === true) ||
+    isComfortable.every((el) => el === false)
+  );
 };
 
-console.log(comfortableWord("yams"));
-console.log(comfortableWord("test"));
+console.log(comfortableWord('yams'));
+console.log(comfortableWord('test'));
 
 console.log(`==============================================`);
 
 const comfortable_word = (word) => {
-  let right = ["y", "u", "i", "o", "p", "h", "j", "k", "l", "n", "m"];
-  let left = ["q", "w", "e", "r", "t", "a", "s", "d", "f", "g", "z", "x", "c", "v", "b"];
-  let arr = [];
+  const right = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm'];
+  const left = [
+    'q',
+    'w',
+    'e',
+    'r',
+    't',
+    'a',
+    's',
+    'd',
+    'f',
+    'g',
+    'z',
+    'x',
+    'c',
+    'v',
+    'b',
+  ];
+  const arr = [];
   if (right.includes(word[0])) {
-    word.split("").map((v, i) => {
+    word.split('').map((v, i) => {
       if (i % 2 === 0) {
         if (right.includes(v)) {
           arr.push(true);
@@ -53,7 +74,7 @@ const comfortable_word = (word) => {
     });
   }
   if (left.includes(word[0])) {
-    word.split("").map((v, i) => {
+    word.split('').map((v, i) => {
       if (i % 2 !== 0) {
         if (right.includes(v)) {
           arr.push(true);
@@ -73,5 +94,5 @@ const comfortable_word = (word) => {
   return arr.every((v) => v === true);
 };
 
-console.log(comfortable_word("yams"));
-console.log(comfortable_word("test"));
+console.log(comfortable_word('yams'));
+console.log(comfortable_word('test'));

@@ -2,8 +2,10 @@ const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 {
   const generateKey = (length, characters) =>
-    Array.from(characters,
-      () => characters[Math.floor(Math.random() * characters.length)])
+    Array.from(
+      characters,
+      () => characters[Math.floor(Math.random() * characters.length)],
+    )
       .splice(0, length)
       .join('');
   const key = generateKey(16, characters);
@@ -26,12 +28,13 @@ const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 {
   const generateKey = (length, possible) =>
-    [...possible].reduce((key, _char, _, array) =>
-      (key += array[Math.floor(Math.random() * possible.length)]), '')
+    [...possible]
+      .reduce(
+        (key, _char, _, array) =>
+          (key += array[Math.floor(Math.random() * possible.length)]),
+        '',
+      )
       .slice(0, length);
 
   console.log(generateKey(16, characters));
 }
-
-
-

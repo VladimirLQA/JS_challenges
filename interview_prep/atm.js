@@ -45,7 +45,9 @@ const testLimits = {
 };
 
 const atm = (sum, limits) => {
-  const denominates = Object.keys(limits).map(Number).sort((a, b) => b - a);
+  const denominates = Object.keys(limits)
+    .map(Number)
+    .sort((a, b) => b - a);
   const result = {};
 
   for (const denom of denominates) {

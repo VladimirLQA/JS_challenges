@@ -6,8 +6,8 @@
  */
 
 function removeDuplicate(string) {
-  let result = [];
-  let map = {};
+  const result = [];
+  const map = {};
 
   for (let i = 0; i < string.length; i++) {
     const char = string[i];
@@ -20,18 +20,18 @@ function removeDuplicate(string) {
   return result.join(``);
 }
 
-console.log(removeDuplicate("abcd")); // -> 'abcd'
-console.log(removeDuplicate("aabbccdd")); // -> 'abcd'
-console.log(removeDuplicate("abcddbca")); // -> 'abcd'
-console.log(removeDuplicate("abababcdcdcd")); // -> 'abcd'
+console.log(removeDuplicate('abcd')); // -> 'abcd'
+console.log(removeDuplicate('aabbccdd')); // -> 'abcd'
+console.log(removeDuplicate('abcddbca')); // -> 'abcd'
+console.log(removeDuplicate('abababcdcdcd')); // -> 'abcd'
 
 // second option
 
 function removeDuplicate(string) {
-  return Array.from(new Set(string)).join("");
+  return Array.from(new Set(string)).join('');
 }
 
-console.log(removeDuplicate("abcd")); // -> 'abcd'
-console.log(removeDuplicate("aabbccdd")); // -> 'abcd'
-console.log(removeDuplicate("abcddbca")); // -> 'abcd'
-console.log(removeDuplicate("abababcdcdcd")); // -> 'abcd'
+console.log(removeDuplicate('abcd')); // -> 'abcd'
+console.log(removeDuplicate('aabbccdd')); // -> 'abcd'
+console.log(removeDuplicate('abcddbca')); // -> 'abcd'
+console.log(removeDuplicate('abababcdcdcd')); // -> 'abcd'

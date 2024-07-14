@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { parse } = require('path');
 
 const csvData = fs.readFileSync('./username.csv', 'utf-8');
 
@@ -7,7 +6,7 @@ const csvData = fs.readFileSync('./username.csv', 'utf-8');
   const getParsedCSV = (data) => {
     const parsedData = [];
 
-    let [headers, ...values] = data.split('\n');
+    const [headers, ...values] = data.split('\n');
     const properties = headers.split(';').map((header) => header.trim());
 
     for (let i = 0; i < values.length; i++) {
@@ -28,7 +27,7 @@ const csvData = fs.readFileSync('./username.csv', 'utf-8');
 
 {
   const getParsedCSV = (data) => {
-    let [header, ...valueLines] = data.split('\n');
+    const [header, ...valueLines] = data.split('\n');
     const properties = header.split(';').map((column) => column.trim());
 
     return valueLines.reduce((acc, line) => {
@@ -49,7 +48,7 @@ const csvData = fs.readFileSync('./username.csv', 'utf-8');
 
 {
   const getParsedCSV = (data) => {
-    let [header, ...valueLines] = data.split('\n');
+    const [header, ...valueLines] = data.split('\n');
     const properties = header.split(';').map((column) => column.trim());
 
     const parsedData = [];

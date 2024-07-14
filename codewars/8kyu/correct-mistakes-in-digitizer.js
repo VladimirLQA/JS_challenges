@@ -19,7 +19,9 @@
   console.log(correct('015'));
 }
 const replacement = {
-  0: 'O', 1: 'I', 5: 'S',
+  0: 'O',
+  1: 'I',
+  5: 'S',
 };
 
 {

@@ -53,10 +53,12 @@ const findKeyInBox = (box) => {
   let result = null;
   if (box.contents.length) {
     box.contents.forEach((c) => {
-      result = c.type === 'key'
-        ? box.id
-        : c.type === 'box' && !result
-          ? findKeyInBox(c) : result;
+      result =
+        c.type === 'key'
+          ? box.id
+          : c.type === 'box' && !result
+            ? findKeyInBox(c)
+            : result;
     });
   }
   return result;

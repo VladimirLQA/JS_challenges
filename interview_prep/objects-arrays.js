@@ -15,7 +15,7 @@ const groupByAge = (arr) =>
   arr.reduce((group, student) => {
     group[student.age]
       ? group[student.age].push(student)
-      : group[student.age] = [student];
+      : (group[student.age] = [student]);
     return group;
   }, {});
 
@@ -61,7 +61,9 @@ const friends = [
 ];
 
 const getPizzasArray = (arr) =>
-  arr.reduce((favoritePizzas, friend) =>
-    [...favoritePizzas, ...friend.pizzas], []);
+  arr.reduce(
+    (favoritePizzas, friend) => [...favoritePizzas, ...friend.pizzas],
+    [],
+  );
 
 console.log(getPizzasArray(friends));

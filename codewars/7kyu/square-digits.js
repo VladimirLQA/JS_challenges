@@ -4,7 +4,8 @@
  * because 92 is 81 and 12 is 1. (81-1-1-81)
  */
 
-const squareDigits = (digits) => Number([...digits.toString()].map((digit) => digit ** 2).join(''));
+const squareDigits = (digits) =>
+  Number([...digits.toString()].map((digit) => digit ** 2).join(''));
 
 console.log(squareDigits(2112)); // 4114
 console.log(squareDigits(3212)); // 9414

@@ -1,5 +1,6 @@
 {
-  const isAllPossibilities = (x) => (x.length > 0 ? x.every((a, i) => x.includes(i)) : false);
+  const isAllPossibilities = (x) =>
+    x.length > 0 ? x.every((a, i) => x.includes(i)) : false;
   console.log(isAllPossibilities([1, 2, 3, 4]));
 }
 
@@ -22,14 +23,16 @@
     for (let i = 0; i <= Math.max(...x); i++) {
       arr.push(i);
     }
-    return x.length ? arr.every((v, i) => v === x[i]) && arr.length === x.length : false;
+    return x.length
+      ? arr.every((v, i) => v === x[i]) && arr.length === x.length
+      : false;
   };
   console.log(isAllPossibilities([1, 2, 3, 4]));
 }
 
 {
   const isAllPossibilities = (arr) => {
-    let set = new Set(arr);
+    const set = new Set(arr);
     return arr.length !== 0 && arr.every((v, i) => set.has(i));
   };
   console.log(isAllPossibilities([1, 2, 3, 4]));

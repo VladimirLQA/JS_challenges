@@ -28,7 +28,10 @@
 
 {
   const didWeWin = (plays) =>
-    plays.reduce((t, [y, p]) => (!y ? t : t + y * (/sack|turnover/.test(p) ? -1 : 1)), 0) > 10;
+    plays.reduce(
+      (t, [y, p]) => (!y ? t : t + y * (/sack|turnover/.test(p) ? -1 : 1)),
+      0,
+    ) > 10;
   console.log(
     didWeWin([
       [8, 'pass'],

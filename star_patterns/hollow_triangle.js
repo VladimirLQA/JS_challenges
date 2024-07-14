@@ -10,17 +10,15 @@
 */
 
 function hollow_triangle(star, times) {
-  let str = "";
+  let str = '';
   for (let i = 0; i <= times; i++) {
     for (let j = 0; j < i; j++) {
       if (i === times) {
         str += star;
+      } else if (j === 0 || j === i - 1) {
+        str += star;
       } else {
-        if (j === 0 || j === i - 1) {
-          str += star;
-        } else {
-          str += " ";
-        }
+        str += ' ';
       }
     }
     str += `\n`;
@@ -28,4 +26,4 @@ function hollow_triangle(star, times) {
   return console.log(str);
 }
 
-hollow_triangle("*", 5);
+hollow_triangle('*', 5);

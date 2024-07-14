@@ -6,7 +6,7 @@
 
 function some(a, b) {
   let result;
-  if (b === "string" || b === "number" || b === "boolean") {
+  if (b === 'string' || b === 'number' || b === 'boolean') {
     if (b === 'string') {
       result = a.toString();
     } else if (b === 'number') {
@@ -39,15 +39,13 @@ function name(string) {
   if (!string) {
     return new Error('Empty string');
   }
-  let alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'.split(
+  const alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'.split(
     ',',
   );
-  let result = string
+  const result = string
     .toLowerCase()
     .split('')
-    .map((char) => {
-      return alphabet.indexOf(char) + 1;
-    });
+    .map((char) => alphabet.indexOf(char) + 1);
 
   return result.join(',');
 }
@@ -66,10 +64,10 @@ console.log(
  */
 
 function sort(string) {
-  let result = string.split(' ');
-  let newArr = [];
+  const result = string.split(' ');
+  const newArr = [];
   result.forEach((word) => {
-    let chars = word.split('');
+    const chars = word.split('');
     chars.forEach((char) => {
       if (+char) {
         newArr[+char - 1] = word;

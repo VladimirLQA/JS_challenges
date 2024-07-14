@@ -11,8 +11,11 @@ const user = {
 };
 
 const getObjValues = (obj, values) =>
-  values.reduce((res, property) =>
-    (property in obj && (res[property] = obj[property]), res), {});
+  values.reduce(
+    (res, property) => (
+      property in obj && (res[property] = obj[property]), res
+    ),
+    {},
+  );
 
 console.log(getObjValues(user, ['name', 'age'])); // { name: 'a', age: 2 }
-

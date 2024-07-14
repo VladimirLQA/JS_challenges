@@ -18,10 +18,10 @@ const countCorrectAnswers = (correctAnsw, studentAnsw) => {
   return score < 0 ? 0 : score;
 };
 
-console.log(countCorrectAnswers(testCorrectAnswers, testStudentsAnswers));    // 6
-console.log(countCorrectAnswers(testCorrectAnswers2, testStudentsAnswers2));  // 7
-console.log(countCorrectAnswers(testCorrectAnswers3, testStudentsAnswers3));  // 16
-console.log(countCorrectAnswers(testCorrectAnswers4, testStudentsAnswers4));  // 0
+console.log(countCorrectAnswers(testCorrectAnswers, testStudentsAnswers)); // 6
+console.log(countCorrectAnswers(testCorrectAnswers2, testStudentsAnswers2)); // 7
+console.log(countCorrectAnswers(testCorrectAnswers3, testStudentsAnswers3)); // 16
+console.log(countCorrectAnswers(testCorrectAnswers4, testStudentsAnswers4)); // 0
 
 {
   const countCorrectAnswers = (correctAnsw, studentAnsw, idx = 0) => {
@@ -42,10 +42,10 @@ console.log(countCorrectAnswers(testCorrectAnswers4, testStudentsAnswers4));  //
     return score < 0 ? 0 : score;
   };
 
-  console.log(calculateScore(testCorrectAnswers, testStudentsAnswers));    // 6
-  console.log(calculateScore(testCorrectAnswers2, testStudentsAnswers2));  // 7
-  console.log(calculateScore(testCorrectAnswers3, testStudentsAnswers3));  // 16
-  console.log(calculateScore(testCorrectAnswers4, testStudentsAnswers4));  // 0
+  console.log(calculateScore(testCorrectAnswers, testStudentsAnswers)); // 6
+  console.log(calculateScore(testCorrectAnswers2, testStudentsAnswers2)); // 7
+  console.log(calculateScore(testCorrectAnswers3, testStudentsAnswers3)); // 16
+  console.log(calculateScore(testCorrectAnswers4, testStudentsAnswers4)); // 0
 }
 
 {
@@ -59,8 +59,8 @@ console.log(countCorrectAnswers(testCorrectAnswers4, testStudentsAnswers4));  //
     return calculateScore(correct, student, idx + 1, score);
   };
 
-  console.log(calculateScore(testCorrectAnswers, testStudentsAnswers));    // 6
-  console.log(calculateScore(testCorrectAnswers2, testStudentsAnswers2));  // 7
-  console.log(calculateScore(testCorrectAnswers3, testStudentsAnswers3));  // 16
-  console.log(calculateScore(testCorrectAnswers4, testStudentsAnswers4));  // 0
+  console.log(calculateScore(testCorrectAnswers, testStudentsAnswers)); // 6
+  console.log(calculateScore(testCorrectAnswers2, testStudentsAnswers2)); // 7
+  console.log(calculateScore(testCorrectAnswers3, testStudentsAnswers3)); // 16
+  console.log(calculateScore(testCorrectAnswers4, testStudentsAnswers4)); // 0
 }

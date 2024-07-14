@@ -18,7 +18,8 @@ elevator(0, 2, 1); // => "right"
 */
 
 {
-  const elevator = (left, right, call) => (Math.abs(call - left) < Math.abs(call - right) ? "left" : "right");
+  const elevator = (left, right, call) =>
+    Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right';
 
   console.log(elevator(0, 1, 0)); // => "left"
   console.log(elevator(0, 1, 1)); // => "right"
@@ -28,7 +29,8 @@ elevator(0, 2, 1); // => "right"
 }
 
 {
-  const elevator = (left, right, call) => ((call - left) ** 2 < (call - right) ** 2 ? "left" : "right");
+  const elevator = (left, right, call) =>
+    (call - left) ** 2 < (call - right) ** 2 ? 'left' : 'right';
   console.log(elevator(0, 1, 0)); // => "left"
   console.log(elevator(0, 1, 1)); // => "right"
   console.log(elevator(0, 1, 2)); // => "right"

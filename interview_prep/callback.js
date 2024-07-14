@@ -4,7 +4,7 @@ const callBackFunction = Math.floor;
 const groupBy = (arr, callBack) =>
   arr.reduce((result, currentEl) => {
     const key = callBack(currentEl);
-    key in result ? result[key].push(currentEl) : result[key] = [currentEl];
+    key in result ? result[key].push(currentEl) : (result[key] = [currentEl]);
     return result;
   }, {});
 

@@ -1,12 +1,10 @@
 {
-  const toCsvText = (x) => {
-    return x
-      .reduce((string, arr, idx) => {
-        string.push([arr.join(',')]);
-        return string;
-      }, [])
-      .join('\n');
-  };
+  const toCsvText = (x) => x
+    .reduce((string, arr, idx) => {
+      string.push([arr.join(',')]);
+      return string;
+    }, [])
+    .join('\n');
 
   console.log(
     toCsvText([

@@ -7,15 +7,13 @@
 
 {
   function isEveryArray(value) {
-    return value.reduce((acc, curr) => {
-      return Array.isArray(curr);
-    }, Array.isArray(value));
+    return value.reduce((acc, curr) => Array.isArray(curr), Array.isArray(value));
   }
 
   console.log(isEveryArray([]));
-  console.log(isEveryArray([["string"]]));
+  console.log(isEveryArray([['string']]));
   console.log(isEveryArray([[], {}]));
-  console.log(isEveryArray(["A", "R", "R", "A", "Y"]));
+  console.log(isEveryArray(['A', 'R', 'R', 'A', 'Y']));
   console.log(isEveryArray([[1], [2], [3]]));
 }
 
@@ -27,9 +25,9 @@ console.log(`==============================================`);
   }
 
   console.log(isEveryArray([]));
-  console.log(isEveryArray([["string"]]));
+  console.log(isEveryArray([['string']]));
   console.log(isEveryArray([[], {}]));
-  console.log(isEveryArray(["A", "R", "R", "A", "Y"]));
+  console.log(isEveryArray(['A', 'R', 'R', 'A', 'Y']));
   console.log(isEveryArray([[1], [2], [3]]));
 }
 
@@ -41,8 +39,8 @@ console.log(`==============================================`);
   }
 
   console.log(isEveryArray([]));
-  console.log(isEveryArray([["string"]]));
+  console.log(isEveryArray([['string']]));
   console.log(isEveryArray([[], {}]));
-  console.log(isEveryArray(["A", "R", "R", "A", "Y"]));
+  console.log(isEveryArray(['A', 'R', 'R', 'A', 'Y']));
   console.log(isEveryArray([[1], [2], [3]]));
 }

@@ -14,17 +14,17 @@
   function whatNumberIsIt(n) {
     switch (n) {
       case Number.MAX_VALUE:
-        return console.log("Input number is Number.MAX_VALUE");
+        return console.log('Input number is Number.MAX_VALUE');
       case Number.MIN_VALUE:
-        return console.log("Input number is Number.MIN_VALUE");
+        return console.log('Input number is Number.MIN_VALUE');
       case Number.POSITIVE_INFINITY:
-        return console.log("Input number is Number.POSITIVE_INFINITY");
+        return console.log('Input number is Number.POSITIVE_INFINITY');
       case Number.NEGATIVE_INFINITY:
-        return console.log("Input number is Number.NEGATIVE_INFINITY");
+        return console.log('Input number is Number.NEGATIVE_INFINITY');
       case Number(n):
-        return console.log("Input number is " + n);
+        return console.log('Input number is ' + n);
       default:
-        return console.log("Input number is Number.NaN");
+        return console.log('Input number is Number.NaN');
     }
   }
 
@@ -44,14 +44,14 @@ console.log(`======================================================`);
         Number.isNaN(n)
           ? `Number.NaN`
           : n === Number.MAX_VALUE
-          ? `Number.MAX_VALUE`
-          : n === Number.MIN_VALUE
-          ? `Number.MIN_VALUE`
-          : n === Infinity
-          ? `Number.POSITIVE_INFINITY`
-          : n === -Infinity
-          ? `Number.NEGATIVE_INFINITY`
-          : n
+            ? `Number.MAX_VALUE`
+            : n === Number.MIN_VALUE
+              ? `Number.MIN_VALUE`
+              : n === Infinity
+                ? `Number.POSITIVE_INFINITY`
+                : n === -Infinity
+                  ? `Number.NEGATIVE_INFINITY`
+                  : n
       }`,
     );
 
@@ -69,7 +69,7 @@ console.log(`======================================================`);
     let str = Object.getOwnPropertyNames(Number) // return array with property names
       .slice(1) // exclude 1st property (Number.length)
       .find((i) => Object.is(Number[i], n)); // return numeric constant name or undefined
-    str = str ? "Number." + str : n; // assign str special value or ordinary number
+    str = str ? 'Number.' + str : n; // assign str special value or ordinary number
     return console.log(`Input number is ${str}`);
   };
 

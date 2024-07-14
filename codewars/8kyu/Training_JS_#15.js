@@ -10,9 +10,7 @@
  */
 
 {
-  const howManySmaller = (arr, n) => {
-    return arr.map((el) => el.toFixed(2)).filter((fixed) => fixed < n).length;
-  };
+  const howManySmaller = (arr, n) => arr.map((el) => el.toFixed(2)).filter((fixed) => fixed < n).length;
 
   console.log(howManySmaller([1.234, 1.235, 1.228], 1.24)); // 2
   console.log(howManySmaller([1.1888, 1.1868, 1.1838], 1.19)); // 1
@@ -22,9 +20,7 @@
 console.log(`===============================================`);
 
 {
-  const howManySmaller = (arr, n) => {
-    return arr.filter((fixed) => fixed.toFixed(2) < n).length;
-  };
+  const howManySmaller = (arr, n) => arr.filter((fixed) => fixed.toFixed(2) < n).length;
 
   console.log(howManySmaller([1.234, 1.235, 1.228], 1.24)); // 2
   console.log(howManySmaller([1.1888, 1.1868, 1.1838], 1.19)); // 1

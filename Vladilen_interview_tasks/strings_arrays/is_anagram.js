@@ -14,5 +14,5 @@ function isAnagram(array) {
   return true;
 }
 
-console.log(isAnagram(["abcd", "bdac", "cabd"])); // true
-console.log(isAnagram(["bdXc", "abcd", "cabd"])); // false
+console.log(isAnagram(['abcd', 'bdac', 'cabd'])); // true
+console.log(isAnagram(['bdXc', 'abcd', 'cabd'])); // false

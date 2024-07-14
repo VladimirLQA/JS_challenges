@@ -19,14 +19,17 @@
 
 {
   const findAll = (arr, n) =>
-    arr.map((el, i) => el === n ? i : 'str').filter((e) => e !== 'str');
+    arr.map((el, i) => (el === n ? i : 'str')).filter((e) => e !== 'str');
 
   console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3)); // => [2, 4]
 }
 
 {
-  const findAll = (nums, find) => nums
-    .reduce((acc, num, index) => num === find ? [...acc, index] : acc, []);
+  const findAll = (nums, find) =>
+    nums.reduce(
+      (acc, num, index) => (num === find ? [...acc, index] : acc),
+      [],
+    );
 
   console.log(findAll([6, 9, 3, 4, 3, 82, 11], 3)); // => [2, 4]
 }

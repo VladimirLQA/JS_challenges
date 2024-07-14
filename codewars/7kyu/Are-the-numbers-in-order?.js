@@ -54,7 +54,8 @@
 
 {
   const inAscOrder = (a) =>
-    a.slice()
+    a
+      .slice()
       .sort((x, y) => x - y)
       .every((e, i) => e === a[i]);
 

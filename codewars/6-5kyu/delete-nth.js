@@ -8,11 +8,11 @@
 
 {
   const deleteNth = (arr, n) => {
-    let resultList = [];
+    const resultList = [];
     const cache = {};
 
     for (let i = 0; i < arr.length; i++) {
-      let count = (cache[arr[i]] = cache[arr[i]] + 1 || 1);
+      const count = cache[arr[i]] = cache[arr[i]] + 1 || 1;
       if (count <= n) resultList.push(arr[i]);
     }
     return resultList;
@@ -24,7 +24,7 @@
 console.log('<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>');
 {
   const deleteNth = (arr, n) => {
-    let cache = {};
+    const cache = {};
     return arr.filter((v) => (cache[v] = (cache[v] || 0) + 1) <= n);
   };
 
@@ -34,7 +34,7 @@ console.log('<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>');
 console.log('<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>');
 {
   const deleteNth = (arr, n) => {
-    let cache = {};
+    const cache = {};
     return arr.filter((v) => (cache[v] = ~~cache[v] + 1) <= n);
   };
 

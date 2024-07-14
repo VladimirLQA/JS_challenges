@@ -31,4 +31,3 @@ console.log(pluralization('table'));
 console.log(pluralization('church'));
 console.log(pluralization('buzz'));
 console.log(pluralization('box'));
-

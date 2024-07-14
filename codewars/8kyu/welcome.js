@@ -18,7 +18,7 @@ const solute = {
   welsh: 'Croeso',
 };
 {
-  const greet = (lang) => solute[lang] ? solute[lang] : 'Welcome';
+  const greet = (lang) => (solute[lang] ? solute[lang] : 'Welcome');
 
   console.log(greet('english'));
   console.log(greet('dutch'));

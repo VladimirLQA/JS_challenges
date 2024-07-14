@@ -18,10 +18,16 @@ const promiseAll = (promises) => {
   });
 };
 
-const arrayOfPromisesResolve =
-  [Promise.resolve(2), Promise.resolve(8), Promise.resolve(10)];
-const arrayOfPromisesReject =
-  [Promise.resolve(2), Promise.resolve(8), Promise.reject(10)];
+const arrayOfPromisesResolve = [
+  Promise.resolve(2),
+  Promise.resolve(8),
+  Promise.resolve(10),
+];
+const arrayOfPromisesReject = [
+  Promise.resolve(2),
+  Promise.resolve(8),
+  Promise.reject(10),
+];
 
 promiseAll(arrayOfPromisesResolve)
   .then((v) => console.log(v))

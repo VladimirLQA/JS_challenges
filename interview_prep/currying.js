@@ -42,13 +42,17 @@ const getIds = map(getId());
 console.log('GetIds', getIds([{ id: 2 }]));
 
 {
-  const curry = (fn, length = fn.length) => (...args) => {
-    if (args.length < length) {
-      return curry((...moreArgs) => fn(...args, ...moreArgs),
-        length - args.length);
-    }
-    return fn(...args);
-  };
+  const curry =
+    (fn, length = fn.length) =>
+      (...args) => {
+        if (args.length < length) {
+          return curry(
+            (...moreArgs) => fn(...args, ...moreArgs),
+            length - args.length,
+          );
+        }
+        return fn(...args);
+      };
 
   const sum = (a, b, c) => a + b + c;
   const curriedSum = curry(sum);

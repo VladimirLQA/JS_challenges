@@ -16,7 +16,7 @@
 
 const toExtract = {
   m1: (x) => [x],
-  m2: function(x, y) {
+  m2(x, y) {
     return [x, y];
   },
   m3(x, y, z) {

@@ -23,8 +23,9 @@
     if (!numbers) return -1;
 
     const product = [...numbers].reduce((product, num) => product * +num, 1);
-    const middleElements =
-      findMiddleElements([...product.toString()].map(Number));
+    const middleElements = findMiddleElements(
+      [...product.toString()].map(Number),
+    );
 
     return +middleElements.join('');
   };
@@ -36,10 +37,12 @@
   const findMiddle = (str) => {
     if (typeof str !== 'string' || !/\d/.test(str)) return -1;
     const product = Array.from(str.replace(/\D/g, ''))
-      .reduce((x, y) => x * y).toString();
-    return +product
-      .slice(Math.ceil(product.length / 2 - 1),
-        Math.floor(product.length / 2 + 1));
+      .reduce((x, y) => x * y)
+      .toString();
+    return +product.slice(
+      Math.ceil(product.length / 2 - 1),
+      Math.floor(product.length / 2 + 1),
+    );
   };
 
   console.log(findMiddle('58jd9fgh/fgh6s.,sdf'));

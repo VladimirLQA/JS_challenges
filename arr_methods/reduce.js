@@ -17,5 +17,5 @@ function ownReduce(array, callbackFunc, initialValue) {
   return accumulator;
 }
 
-let testArray = [1, 2, 3, 4, 5];
+const testArray = [1, 2, 3, 4, 5];
 console.log(ownReduce(testArray, (acc, value) => acc + value));

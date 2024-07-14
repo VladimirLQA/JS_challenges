@@ -5,12 +5,14 @@
  * */
 
 function freqSep(str, separator) {
-  return [...str.toLowerCase()].map((el, index, arr) => arr.filter((e) => el === e).length).join(`${separator} `);
+  return [...str.toLowerCase()]
+    .map((el, index, arr) => arr.filter((e) => el === e).length)
+    .join(`${separator} `);
 }
 
-console.log(freqSep("Toster", ";"));
-console.log(freqSep("ffaanntazzzy", ";"));
-console.log(freqSep("aaaaaaaaaaa", ";"));
+console.log(freqSep('Toster', ';'));
+console.log(freqSep('ffaanntazzzy', ';'));
+console.log(freqSep('aaaaaaaaaaa', ';'));
 
 console.log(`================================================`);
 
@@ -29,12 +31,26 @@ console.log(`================================================`);
  */
 
 function returnWithoutGeese(arr) {
-  const geese = ["Африканка", "Римская хохлатая", "Тулуза", "Пилигрим", "Штайнбахер"];
+  const geese = [
+    'Африканка',
+    'Римская хохлатая',
+    'Тулуза',
+    'Пилигрим',
+    'Штайнбахер',
+  ];
   return arr.filter((el) => !geese.includes(el));
 }
 
 console.log(
-  returnWithoutGeese(["Кряква", "Крюк Билл", "Африканка", "Хохлатая", "Пилигрим", "Тулуза", "Синий шведский"]),
+  returnWithoutGeese([
+    'Кряква',
+    'Крюк Билл',
+    'Африканка',
+    'Хохлатая',
+    'Пилигрим',
+    'Тулуза',
+    'Синий шведский',
+  ]),
 );
 
 console.log(`================================================`);
@@ -48,15 +64,18 @@ console.log(`================================================`);
  */
 
 function generateConcatedNumber(number, numberOfRepeats) {
-  return +("" + number).repeat(numberOfRepeats);
+  return +('' + number).repeat(numberOfRepeats);
 }
 
 function getConcatedValue(number, pattern) {
   return pattern
-    ? ""
-    : `${number} + ${generateConcatedNumber(number, 2)} + ${generateConcatedNumber(number, 3)} === ${
-        number + generateConcatedNumber(number, 2) + generateConcatedNumber(number, 3)
-      }`;
+    ? ''
+    : `${number} + ${generateConcatedNumber(number, 2)} +
+    ${generateConcatedNumber(number, 3)} === ${
+  number +
+      generateConcatedNumber(number, 2) +
+      generateConcatedNumber(number, 3)
+}`;
 }
 
 console.log(getConcatedValue(1));

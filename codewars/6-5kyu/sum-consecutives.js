@@ -24,8 +24,10 @@
 
 {
   const sumConsecutives = (s) =>
-    s.reduce((p, c, i, s) =>
-      (c === s[i - 1] ? (p[p.length - 1] += c) : p.push(c), p), []);
+    s.reduce(
+      (p, c, i, s) => (c === s[i - 1] ? (p[p.length - 1] += c) : p.push(c), p),
+      [],
+    );
 
   console.log(sumConsecutives([1, 4, 4, 4, 0, 4, 3, 3, 1])); // [1,12,0,4,6,1]
   console.log(sumConsecutives([1, 1, 7, 7, 3])); // [2,14,3]

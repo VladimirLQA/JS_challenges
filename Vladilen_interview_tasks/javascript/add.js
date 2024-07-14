@@ -1,13 +1,13 @@
-"use strict";
+'use strict';
 
 function add(a, b) {
-  if (typeof a === "undefined") {
+  if (typeof a === 'undefined') {
     return add;
   }
 
-  if (typeof b === "undefined") {
+  if (typeof b === 'undefined') {
     return function sum(c) {
-      if (typeof c === "undefined") {
+      if (typeof c === 'undefined') {
         return sum;
       }
       return a + c;

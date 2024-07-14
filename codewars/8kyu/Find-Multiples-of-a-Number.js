@@ -14,7 +14,8 @@
   const findMultiples = (integer, limit) =>
     Array.from(
       { length: Math.floor(limit / integer) },
-      (_, idx) => (idx + 1) * integer);
+      (_, idx) => (idx + 1) * integer,
+    );
 
   console.log(findMultiples(2, 6)); // [2, 4, 6]
 }

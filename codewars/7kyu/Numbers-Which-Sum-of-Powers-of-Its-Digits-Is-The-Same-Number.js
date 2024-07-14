@@ -14,8 +14,9 @@ console.log(eqSumPowdig(370, 3)); // [153, 370]
 const eqSumPowdig2 = (hMax, exp) =>
   [...Array(hMax - 1)]
     .map((_, idx) => idx + 2)
-    .filter(val => [...`${val}`]
-      .reduce((pre, val) => pre + val ** exp, 0) === val);
+    .filter(
+      (val) => [...`${val}`].reduce((pre, val) => pre + val ** exp, 0) === val,
+    );
 
 console.log(eqSumPowdig2(100, 2)); // []
 console.log(eqSumPowdig2(200, 3)); // [153]

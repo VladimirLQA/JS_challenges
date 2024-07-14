@@ -50,9 +50,9 @@ function print(array) {
 }
 
 print(rotate(matrix));
-console.log("---------------------");
+console.log('---------------------');
 print(rotate180(matrix));
-console.log("---------------------");
+console.log('---------------------');
 print(rotate270(matrix));
-console.log("---------------------");
+console.log('---------------------');
 print(rotate360(matrix));

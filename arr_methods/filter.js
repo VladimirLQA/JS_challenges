@@ -1,5 +1,5 @@
 function ownFilter(array, callbackFunc) {
-  let resultArr = [];
+  const resultArr = [];
 
   for (let i = 0; i < array.length; i++) {
     if (callbackFunc(array[i], i, array)) {
@@ -9,5 +9,5 @@ function ownFilter(array, callbackFunc) {
   return resultArr;
 }
 
-let testArray = [1, 2, 3, 4, 5];
+const testArray = [1, 2, 3, 4, 5];
 console.log(ownFilter(testArray, (el, i, arr) => el > 5));

@@ -22,7 +22,6 @@ const users = [
 ];
 
 {
-
   const isNameExist = (array, name) => !!array.find((obj) => obj.name === name);
   // inefficient for such task
   /*let isExist = true;

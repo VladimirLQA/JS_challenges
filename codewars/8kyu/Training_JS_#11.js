@@ -8,8 +8,20 @@
  * jump out the loop; If bag is not full, you should traverse dolls until the last element.*/
 
 {
-  grabDoll = (dolls) => dolls.filter((i) => i === "Hello Kitty" || i === "Barbie doll").slice(0, 3);
+  grabDoll = (dolls) =>
+    dolls.filter((i) => i === 'Hello Kitty' || i === 'Barbie doll').slice(0, 3);
 
-  console.log(grabDoll(["Mickey Mouse", "Hello Kitty", "Hello Kitty", "Snow white"])); //["Hello Kitty","Hello Kitty"]
-  console.log(grabDoll(["Mickey Mouse", "Barbie doll", "Hello Kitty", "Hello Kitty", "Hello Kitty", "Snow white"])); // ["Barbie doll","Hello Kitty","Hello Kitty"]
+  console.log(
+    grabDoll(['Mickey Mouse', 'Hello Kitty', 'Hello Kitty', 'Snow white']),
+  ); //["Hello Kitty","Hello Kitty"]
+  console.log(
+    grabDoll([
+      'Mickey Mouse',
+      'Barbie doll',
+      'Hello Kitty',
+      'Hello Kitty',
+      'Hello Kitty',
+      'Snow white',
+    ]),
+  ); // ["Barbie doll","Hello Kitty","Hello Kitty"]
 }

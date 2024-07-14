@@ -20,13 +20,15 @@
 console.log(`=====================================================`);
 
 {
-  const sumEvenNumbers = (input) => input.reduce((acc, cur) => (cur % 2 === 0 ? cur + acc : acc), 0);
+  const sumEvenNumbers = (input) =>
+    input.reduce((acc, cur) => (cur % 2 === 0 ? cur + acc : acc), 0);
   console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 30
 }
 
 console.log(`=====================================================`);
 
 {
-  const sumEvenNumbers = (input) => input.filter((el) => el % 2 === 0).reduce((acc, curr) => acc + curr);
+  const sumEvenNumbers = (input) =>
+    input.filter((el) => el % 2 === 0).reduce((acc, curr) => acc + curr);
   console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // 30
 }

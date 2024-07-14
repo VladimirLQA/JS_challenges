@@ -30,16 +30,17 @@ const romanToIntegers = {
 }
 
 {
-  const romanToInt = (str) => str.split('').reduce((total, curr, idx) => {
-    const next = str[idx + 1];
+  const romanToInt = (str) =>
+    str.split('').reduce((total, curr, idx) => {
+      const next = str[idx + 1];
 
-    if (romanToIntegers[curr] < romanToIntegers[next]) {
-      total -= romanToIntegers[curr];
-    } else {
-      total += romanToIntegers[curr];
-    }
-    return total;
-  }, 0);
+      if (romanToIntegers[curr] < romanToIntegers[next]) {
+        total -= romanToIntegers[curr];
+      } else {
+        total += romanToIntegers[curr];
+      }
+      return total;
+    }, 0);
 
   console.log(romanToInt('MCMXCIV'));
 }

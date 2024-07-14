@@ -1,6 +1,6 @@
 {
   const between = (a, b) => {
-    let result = [];
+    const result = [];
     for (let i = a; i <= b; i++) {
       result.push(i);
     }

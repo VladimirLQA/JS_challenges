@@ -16,15 +16,29 @@
     return result;
   };
 
-  console.log(mapEmUp([1, 2, 3], [[function(i) {
-    return i > 2;
-  }, function(i) {
-    return i;
-  }], [function(i) {
-    return i < 2;
-  }, function() {
-    return 0;
-  }]]));
+  console.log(
+    mapEmUp(
+      [1, 2, 3],
+      [
+        [
+          function(i) {
+            return i > 2;
+          },
+          function(i) {
+            return i;
+          },
+        ],
+        [
+          function(i) {
+            return i < 2;
+          },
+          function() {
+            return 0;
+          },
+        ],
+      ],
+    ),
+  );
 }
 
 {
@@ -36,15 +50,29 @@
       return -1;
     });
 
-  console.log(mapEmUp([1, 2, 3], [[function(i) {
-    return i > 2;
-  }, function(i) {
-    return i;
-  }], [function(i) {
-    return i < 2;
-  }, function() {
-    return 0;
-  }]]));
+  console.log(
+    mapEmUp(
+      [1, 2, 3],
+      [
+        [
+          function(i) {
+            return i > 2;
+          },
+          function(i) {
+            return i;
+          },
+        ],
+        [
+          function(i) {
+            return i < 2;
+          },
+          function() {
+            return 0;
+          },
+        ],
+      ],
+    ),
+  );
 }
 {
   const mapEmUp = (input, mappers) =>
@@ -53,13 +81,27 @@
       return found ? found[1](el) : -1;
     });
 
-  console.log(mapEmUp([1, 2, 3], [[function(i) {
-    return i > 2;
-  }, function(i) {
-    return i;
-  }], [function(i) {
-    return i < 2;
-  }, function() {
-    return 0;
-  }]]));
+  console.log(
+    mapEmUp(
+      [1, 2, 3],
+      [
+        [
+          function(i) {
+            return i > 2;
+          },
+          function(i) {
+            return i;
+          },
+        ],
+        [
+          function(i) {
+            return i < 2;
+          },
+          function() {
+            return 0;
+          },
+        ],
+      ],
+    ),
+  );
 }

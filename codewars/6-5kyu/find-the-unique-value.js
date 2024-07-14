@@ -23,7 +23,7 @@ console.log('<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>');
 {
   const findUniq = (array) => {
     let uniqValue,
-      hash = {};
+        hash = {};
 
     for (let i = 0; i < array.length; i++) {
       if (array[i] in hash) {
@@ -46,9 +46,7 @@ console.log('<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>');
 {
   const findUniq = (array) =>
     // or use .find()
-    +array.filter((value) => {
-      return array.indexOf(value) === array.lastIndexOf(value);
-    });
+    +array.filter((value) => array.indexOf(value) === array.lastIndexOf(value));
   console.log(findUniq([1, 1, 1, 2, 1, 1]));
   console.log(findUniq([0, 0, 0.55, 0, 0]));
 }

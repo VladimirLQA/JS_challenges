@@ -14,8 +14,7 @@
 
 {
   const stray = (numbers) =>
-    numbers.find((num) =>
-      numbers.indexOf(num) === numbers.lastIndexOf(num));
+    numbers.find((num) => numbers.indexOf(num) === numbers.lastIndexOf(num));
 
   console.log(stray([1, 1, 2]));
   console.log(stray([17, 17, 3, 17, 17, 17, 17]));

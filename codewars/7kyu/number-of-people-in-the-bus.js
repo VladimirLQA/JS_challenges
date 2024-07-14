@@ -22,7 +22,8 @@ const testCase3 = [
 const testCase4 = [[0, 0]]; // 0
 
 {
-  const countPeopleInTheBus = (arr) => arr.reduce((amount, [on, out]) => amount + on - out, 0);
+  const countPeopleInTheBus = (arr) =>
+    arr.reduce((amount, [on, out]) => amount + on - out, 0);
 
   console.log(countPeopleInTheBus(testCase1));
   console.log(countPeopleInTheBus(testCase2));

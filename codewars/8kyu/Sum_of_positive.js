@@ -8,7 +8,7 @@
   function positiveSum(array) {
     let result = 0;
     for (let i = 0; i < array.length; i++) {
-      let char = array[i];
+      const char = array[i];
 
       if (char > 0) result += char;
     }
@@ -35,7 +35,8 @@ console.log(`=======================================================`);
 }
 console.log(`=======================================================`);
 {
-  const positiveSum = (arr) => arr.reduce((sum, n) => (n > 0 ? sum + n : sum), 0);
+  const positiveSum = (arr) =>
+    arr.reduce((sum, n) => (n > 0 ? sum + n : sum), 0);
 
   console.log(positiveSum([1, 2, 3, 4, 5])); // 15
   console.log(positiveSum([1, -2, 3, 4, 5])); // 13

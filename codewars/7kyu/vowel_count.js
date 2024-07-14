@@ -8,14 +8,14 @@
   function getCount(str) {
     return str
       .toLowerCase()
-      .split("")
+      .split('')
       .reduce((count, char) => {
-        if ("aeiou".includes(char)) count++;
+        if ('aeiou'.includes(char)) count++;
         return count;
       }, 0);
   }
 
-  console.log(getCount("abracadabra")); // 5
+  console.log(getCount('abracadabra')); // 5
 }
 
 {
@@ -23,24 +23,24 @@
     return (str.match(/[aeiou]/gi) || []).length;
   }
 
-  console.log(getCount("abracadabra")); // 5
+  console.log(getCount('abracadabra')); // 5
 }
 
 {
   function getCount(str) {
     return str
       .toLowerCase()
-      .split("")
-      .filter((c) => "aeiou".includes(c)).length;
+      .split('')
+      .filter((c) => 'aeiou'.includes(c)).length;
   }
 
-  console.log(getCount("abracadabra")); // 5
+  console.log(getCount('abracadabra')); // 5
 }
 
 {
   function getCount(str) {
-    return str.replace(/[^aeiou]/gi, "").length;
+    return str.replace(/[^aeiou]/gi, '').length;
   }
 
-  console.log(getCount("abracadabra")); // 5
+  console.log(getCount('abracadabra')); // 5
 }

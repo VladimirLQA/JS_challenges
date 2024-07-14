@@ -31,13 +31,15 @@
 }
 
 {
-  const expandedForm = (n) => n.toString()
-    .split('')
-    .reverse()
-    .map((a, i) => a * Math.pow(10, i))
-    .filter((a) => a > 0)
-    .reverse()
-    .join(' + ');
+  const expandedForm = (n) =>
+    n
+      .toString()
+      .split('')
+      .reverse()
+      .map((a, i) => a * Math.pow(10, i))
+      .filter((a) => a > 0)
+      .reverse()
+      .join(' + ');
 
   console.log(expandedForm(10));
   console.log(expandedForm(42));
@@ -59,7 +61,8 @@
 
 {
   const expandedForm = (num) =>
-    num.toString()
+    num
+      .toString()
       .split('')
       .reduce((acc, n, idx) => {
         if (n !== '0') {

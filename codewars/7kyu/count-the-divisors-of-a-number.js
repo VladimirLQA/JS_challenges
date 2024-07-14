@@ -21,8 +21,8 @@
 
     for (let i = 2; i <= Math.sqrt(n); i++) {
       if (n % i === 0) {
-        if (i !== n / i) count += 2; // Increment count by 2 for each pair of divisors
-        else count++; // Increment count by 1 if the divisor is a perfect square
+        if (i !== n / i) { count += 2; } // Increment count by 2 for each pair of divisors
+        else { count++; } // Increment count by 1 if the divisor is a perfect square
       }
     }
 

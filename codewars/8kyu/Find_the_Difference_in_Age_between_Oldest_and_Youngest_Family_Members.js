@@ -7,10 +7,10 @@
 
 {
   function differenceInAges(ages) {
-    let sorted = ages.map((el) => Math.floor(el)).sort((a, b) => a - b);
-    let minAge = sorted.shift(); // sorted[0]
-    let maxAge = sorted.pop(); // sorted[sorted.length - 1]
-    let differenceAge = maxAge - minAge;
+    const sorted = ages.map((el) => Math.floor(el)).sort((a, b) => a - b);
+    const minAge = sorted.shift(); // sorted[0]
+    const maxAge = sorted.pop(); // sorted[sorted.length - 1]
+    const differenceAge = maxAge - minAge;
     return [minAge, maxAge, differenceAge];
   }
 
@@ -22,9 +22,9 @@ console.log(`=================================================`);
 
 {
   function differenceInAges(ages) {
-    let max = Math.max(...ages),
-      min = Math.min(...ages),
-      diff = max - min;
+    const max = Math.max(...ages),
+          min = Math.min(...ages),
+          diff = max - min;
 
     return [min, max, diff];
   }
@@ -37,8 +37,8 @@ console.log(`=================================================`);
 
 {
   const differenceInAges = (ages) => {
-    let youngest = Math.min.apply(null, ages);
-    let oldest = Math.max.apply(null, ages);
+    const youngest = Math.min.apply(null, ages);
+    const oldest = Math.max.apply(null, ages);
     return [youngest, oldest, oldest - youngest];
   };
   console.log(differenceInAges([82, 15, 6, 38, 35])); // [6, 82, 76]

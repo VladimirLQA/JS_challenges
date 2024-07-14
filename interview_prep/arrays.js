@@ -30,8 +30,10 @@ const duplicates = [1, 2, 2, 3, 4, 4];
 
 {
   const removeDuplicates = (array) =>
-    array.reduce((result, el) => result.includes(el)
-      ? result : [...result, el], []);
+    array.reduce(
+      (result, el) => (result.includes(el) ? result : [...result, el]),
+      [],
+    );
 
   console.log(removeDuplicates(duplicates));
 }

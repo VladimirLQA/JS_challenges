@@ -6,8 +6,7 @@ const isPrime = (n) => {
   return n !== 1;
 };
 
-const sexyPrime = (x, y) =>
-  isPrime(x) && isPrime(y) && Math.abs(x - y) === 6;
+const sexyPrime = (x, y) => isPrime(x) && isPrime(y) && Math.abs(x - y) === 6;
 
 console.log(sexyPrime(61, 67)); // true
 console.log(sexyPrime(7, 13)); // true

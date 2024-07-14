@@ -1,5 +1,7 @@
 // String.prototype.givePizza = () => 'Pizza';
-String.prototype.givePizza = function() { return this + ', Pizza'; };
+String.prototype.givePizza = function() {
+  return this + ', Pizza';
+};
 
 const name = 'Mau';
 

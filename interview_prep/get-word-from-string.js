@@ -31,9 +31,9 @@ console.log('<<<<>>>>');
     const idx = str.indexOf(word[0]);
     if (idx === -1) return false;
     return isCanGetWordFromString(
-      str.slice(0, idx) + str.slice(idx + 1), word.slice(1),
+      str.slice(0, idx) + str.slice(idx + 1),
+      word.slice(1),
     );
-
   };
 
   console.log(isCanGetWordFromString(str, strTest)); // false

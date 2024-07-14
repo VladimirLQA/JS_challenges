@@ -8,11 +8,13 @@ Sam Harris => S.H
  */
 
 const abbrevName = (name) =>
-  name.split(' ').map((p) => p.at(0).toUpperCase()).join('.');
+  name
+    .split(' ')
+    .map((p) => p.at(0).toUpperCase())
+    .join('.');
 
 console.log(abbrevName('Sam Harris'));
 
-const abbrevName2 = (name) =>
-  name.match(/\b\w/g).join('.').toUpperCase();
+const abbrevName2 = (name) => name.match(/\b\w/g).join('.').toUpperCase();
 
 console.log(abbrevName2('Sam Harris'));

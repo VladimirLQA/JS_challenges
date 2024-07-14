@@ -14,13 +14,13 @@
   function cutIt(arr) {
     let smallest = arr[0].length;
     arr.map((value) => {
-      smallest > value.length ? (smallest = value.length) : smallest;
+      smallest > value.length ? smallest = value.length : smallest;
     });
     return arr.map((value) => value.slice(0, smallest));
   }
-  console.log(cutIt(["ab", "cde", "fgh"])); // ["ab","cd","fg"]
-  console.log(cutIt(["abc", "defgh", "ijklmn"])); // ["abc","def","ijk"]
-  console.log(cutIt(["codewars", "javascript", "java"])); //["code","java","java"]
+  console.log(cutIt(['ab', 'cde', 'fgh'])); // ["ab","cd","fg"]
+  console.log(cutIt(['abc', 'defgh', 'ijklmn'])); // ["abc","def","ijk"]
+  console.log(cutIt(['codewars', 'javascript', 'java'])); //["code","java","java"]
 }
 
 console.log(`====================================================`);
@@ -31,7 +31,7 @@ console.log(`====================================================`);
     return arr.map((x) => x.slice(0, minLength));
   }
 
-  console.log(cutIt(["ab", "cde", "fgh"])); // ["ab","cd","fg"]
-  console.log(cutIt(["abc", "defgh", "ijklmn"])); // ["abc","def","ijk"]
-  console.log(cutIt(["codewars", "javascript", "java"])); //["code","java","java"]
+  console.log(cutIt(['ab', 'cde', 'fgh'])); // ["ab","cd","fg"]
+  console.log(cutIt(['abc', 'defgh', 'ijklmn'])); // ["abc","def","ijk"]
+  console.log(cutIt(['codewars', 'javascript', 'java'])); //["code","java","java"]
 }

@@ -18,9 +18,9 @@
     str === ''
       ? ''
       : str
-          .split(' ')
-          .map((_) => 'sex')
-          .join(' ');
+        .split(' ')
+        .map((_) => 'sex')
+        .join(' ');
 
   console.log(toFreud('This is a test'));
 }

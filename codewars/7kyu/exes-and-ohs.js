@@ -22,9 +22,10 @@
 console.log(`<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
 
 {
-  const ox = (str) => {
-    return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
-  };
+  const ox = (str) =>
+    str.toLowerCase().split('x').length ===
+      str.toLowerCase().split('o').length
+    ;
 
   console.log(ox('xxoo'));
   console.log(ox('xxoox'));
@@ -36,8 +37,8 @@ console.log(`<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
 
 {
   const ox = (str) => {
-    let x = str.match(/x/gi);
-    let o = str.match(/o/gi);
+    const x = str.match(/x/gi);
+    const o = str.match(/o/gi);
     return (o && o.length) === (x && x.length);
   };
 

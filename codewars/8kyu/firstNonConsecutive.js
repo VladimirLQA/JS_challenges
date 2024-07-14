@@ -39,7 +39,11 @@ log(`===========================================================`);
 log(`===========================================================`);
 {
   firstNonConsecutive = (arr) =>
-    arr.length === 1 ? null : arr[0] + 1 !== arr[1] ? arr[1] : firstNonConsecutive(arr.slice(1));
+    arr.length === 1
+      ? null
+      : arr[0] + 1 !== arr[1]
+        ? arr[1]
+        : firstNonConsecutive(arr.slice(1));
 
   log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8])); // 6
   log(firstNonConsecutive([-3, -2, 0, 1, 2])); // 0

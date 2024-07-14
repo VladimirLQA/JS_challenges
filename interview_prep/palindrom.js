@@ -17,7 +17,9 @@
 // 2 ->
 {
   function isPalindrom1(word) {
-    return word.toLowerCase() === word.toLowerCase().split('').reverse().join('');
+    return (
+      word.toLowerCase() === word.toLowerCase().split('').reverse().join('')
+    );
   }
 
   console.log(isPalindrom1('adda'));
@@ -33,7 +35,7 @@
         .toLowerCase()
         .split('')
         .reduceRight((acc, item) => {
-          acc = acc + item;
+          acc += item;
           return acc;
         }, '')
     );
@@ -62,7 +64,7 @@
 {
   function isPalindrom(word) {
     const wordLowerCase = word.toLowerCase();
-    let arr = wordLowerCase.split('');
+    const arr = wordLowerCase.split('');
     const newArr = [];
 
     for (let i = wordLowerCase.length - 1; i >= 0; i--) {
@@ -81,7 +83,7 @@
     if (x < 0 || (x % 10 === 0 && x !== 0)) {
       return false;
     } else {
-      let str = x.toString();
+      const str = x.toString();
       return x.toString() === str.split('').reverse().join('');
     }
   };

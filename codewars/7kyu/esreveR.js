@@ -4,12 +4,12 @@
  * (the dedicated builtin(s) functionalities are deactivated)
  */
 
-let testArray1 = [1, 2, 3];
-let testArray2 = [1, null, 14, "two"];
+const testArray1 = [1, 2, 3];
+const testArray2 = [1, null, 14, 'two'];
 
 {
   function reverse(array) {
-    let result = [];
+    const result = [];
     for (let i = array.length - 1; i >= 0; i--) {
       result.push(array[i]);
     }
@@ -24,9 +24,7 @@ console.log(`========================================`);
 
 {
   function reverse(array) {
-    return array.reduceRight((a, b) => {
-      return a.push(b), a;
-    }, []);
+    return array.reduceRight((a, b) => (a.push(b), a), []);
     // return array.reduceRight((a, b) => [...a, b], [])
   }
 
@@ -38,9 +36,7 @@ console.log(`========================================`);
 
 {
   function reverse(array) {
-    return array.reduce((a, b) => {
-      return [b].concat(a);
-    }, []);
+    return array.reduce((a, b) => [b].concat(a), []);
   }
 
   console.log(reverse(testArray1));

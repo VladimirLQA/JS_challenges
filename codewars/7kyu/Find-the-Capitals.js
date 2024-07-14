@@ -10,24 +10,27 @@
 
 {
   const capitals = (word) =>
-    [...word].reduce((acc, currentChar, idx) =>
-      (/[A-Z]/g.test(currentChar) && acc.push(idx), acc), []);
+    [...word].reduce(
+      (acc, currentChar, idx) => (
+        /[A-Z]/g.test(currentChar) && acc.push(idx), acc
+      ),
+      [],
+    );
 
   console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]
 }
 
 {
   const capitals = (word) =>
-    word.match(/[A-Z]/g)
-      .map((char) => word.indexOf(char));
+    word.match(/[A-Z]/g).map((char) => word.indexOf(char));
 
   console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]
 }
 
 {
   const capitals = (word) =>
-    [...word].map((char, idx) =>
-      char.toUpperCase() === char ? idx : -1)
+    [...word]
+      .map((char, idx) => (char.toUpperCase() === char ? idx : -1))
       .filter((el) => el >= 0);
 
   console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]

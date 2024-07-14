@@ -11,13 +11,11 @@ strCount({
   //returns 3
  */
 {
-  const strCount = (testObj) => {
-    return Object.values(testObj).reduce((count, value) => {
-      if (typeof value === 'object') count += strCount(value);
-      if (typeof value === 'string') count++;
-      return count;
-    }, 0);
-  };
+  const strCount = (testObj) => Object.values(testObj).reduce((count, value) => {
+    if (typeof value === 'object') count += strCount(value);
+    if (typeof value === 'string') count++;
+    return count;
+  }, 0);
 
   console.log(
     strCount({
@@ -36,7 +34,7 @@ strCount({
 {
   const strCount = (data) => {
     let c = 0;
-    for (let i in data) {
+    for (const i in data) {
       if (typeof data[i] === 'object') c += strCount(data[i]);
       if (typeof data[i] === 'string') c += 1;
     }

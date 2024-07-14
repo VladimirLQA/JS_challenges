@@ -4,8 +4,8 @@
  */
 
 {
-  let min = (list) => Math.min(...list);
-  let max = (list) => Math.max(...list);
+  const min = (list) => Math.min(...list);
+  const max = (list) => Math.max(...list);
 
   console.log(min([-52, 56, 30, 29, -54, 0, -110])); // -110
   console.log(min([42, 54, 65, 87, 0])); // 0
@@ -16,8 +16,10 @@
 console.log(`================================================`);
 
 {
-  const min = (list) => list.reduce((min_val, val) => (min_val <= val ? min_val : val));
-  const max = (list) => list.reduce((max_val, val) => (max_val > val ? max_val : val));
+  const min = (list) =>
+    list.reduce((min_val, val) => (min_val <= val ? min_val : val));
+  const max = (list) =>
+    list.reduce((max_val, val) => (max_val > val ? max_val : val));
 
   console.log(min([-52, 56, 30, 29, -54, 0, -110])); // -110
   console.log(min([42, 54, 65, 87, 0])); // 0

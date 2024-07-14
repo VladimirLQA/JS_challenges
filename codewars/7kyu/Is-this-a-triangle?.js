@@ -6,7 +6,7 @@
  (In this case, all triangles must have surface greater than 0 to be accepted).
 */
 
-const isTriangle = (a, b, c) => (a + c > b) && (a + b > c) && (b + c > a);
+const isTriangle = (a, b, c) => a + c > b && a + b > c && b + c > a;
 
 console.log(isTriangle(1, 2, 2));
 console.log(isTriangle(-1, 2, 2));

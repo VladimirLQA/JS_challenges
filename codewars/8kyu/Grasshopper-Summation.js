@@ -13,8 +13,10 @@
 
 {
   const summation = (num) =>
-    Array.from({ length: num }, (_, idx) => idx + 1)
-      .reduce((sum, currentNum) => sum += currentNum, 0);
+    Array.from({ length: num }, (_, idx) => idx + 1).reduce(
+      (sum, currentNum) => (sum += currentNum),
+      0,
+    );
 
   console.log(summation(1));
   console.log(summation(2));
@@ -22,8 +24,7 @@
 }
 
 {
-
-  const summation = (num) => num ? summation(num - 1) + num : num;
+  const summation = (num) => (num ? summation(num - 1) + num : num);
 
   console.log(summation(1));
   console.log(summation(2));

@@ -30,7 +30,7 @@ if (data) {
     }
   }
   for (const row of table) {
-    const a = Math.round(row[3] * 100 / max);
+    const a = Math.round((row[3] * 100) / max);
     row.push(a.toString());
   }
   table.sort((r1, r2) => r2[5] - r1[5]);

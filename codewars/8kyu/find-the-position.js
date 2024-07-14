@@ -6,8 +6,9 @@
 
 {
   const getAlphabet = () =>
-    Array.from({ length: 26 }, (_, idx) =>
-      String.fromCharCode(idx + 97)).join('');
+    Array.from({ length: 26 }, (_, idx) => String.fromCharCode(idx + 97)).join(
+      '',
+    );
 
   const position = (letter) => getAlphabet().indexOf(letter) + 1;
 
@@ -17,8 +18,7 @@
 }
 
 {
-  const position = (l) =>
-    `Position of alphabet: ${l.charCodeAt(0) - 96}`;
+  const position = (l) => `Position of alphabet: ${l.charCodeAt(0) - 96}`;
 
   console.log(position('a')); // 1
   console.log(position('z')); // 26

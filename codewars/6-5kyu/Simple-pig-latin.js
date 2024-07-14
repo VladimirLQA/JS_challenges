@@ -12,13 +12,13 @@ const reverseStr = (string) =>
 
 console.log(reverseStr('Pig latin is cool'));
 
-
 const pigIt = (str) =>
-  str.split(' ')
+  str
+    .split(' ')
     .map((el) =>
-      /^[a-z0-9]+$/i.test(el) ? `${el.substring(1) + el.charAt(0)}ay` : el)
+      /^[a-z0-9]+$/i.test(el) ? `${el.substring(1) + el.charAt(0)}ay` : el,
+    )
     .join(' ');
-
 
 console.log(pigIt('Pig latin is cool !'));
 console.log(pigIt('Hello world !'));

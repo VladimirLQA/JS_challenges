@@ -15,7 +15,7 @@ sumMul(4, -7)  ==> "INVALID"
 {
   function sumMul(n, m) {
     if (n <= 0 || m <= 0 || !Number.isInteger(n) || !Number.isInteger(m)) {
-      return "INVALID";
+      return 'INVALID';
     }
 
     let result = 0;
@@ -35,11 +35,18 @@ sumMul(4, -7)  ==> "INVALID"
   console.log(sumMul(4, -7)); // Output: "INVALID"
 }
 
-console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+console.log(
+  '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',
+);
 
 {
   const sumMul = (n, m) =>
-    m <= 0 ? "INVALID" : Array.from({ length: m }).reduce((acc, _, index) => (index % n === 0 ? acc + index : acc), 0);
+    m <= 0
+      ? 'INVALID'
+      : Array.from({ length: m }).reduce(
+        (acc, _, index) => (index % n === 0 ? acc + index : acc),
+        0,
+      );
 
   console.log(sumMul(2, 9)); // 20
   console.log(sumMul(3, 13)); // Output: 30
@@ -47,7 +54,9 @@ console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   console.log(sumMul(4, -7)); // Output: "INVALID"
 }
 
-console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+console.log(
+  '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',
+);
 
 {
   function sumMul(n, m) {
@@ -55,7 +64,7 @@ console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     for (let i = n; i < m; i++) {
       if (i % n === 0) res += i;
     }
-    return res > 0 ? res : "INVALID";
+    return res > 0 ? res : 'INVALID';
   }
 
   console.log(sumMul(2, 9)); // 20

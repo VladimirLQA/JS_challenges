@@ -44,10 +44,12 @@ console.log('2. Get back only active users');
 console.log('3. Sort users by age descending');
 
 {
-  const sortedUsersByAgeDESC =
-    [...users].sort((user1, user2) => user2.age - user1.age);
-  const sortedUsersByAgeDESC1 =
-    [...users].sort((user1, user2) => (user1.age < user2.age ? 1 : -1));
+  const sortedUsersByAgeDESC = [...users].sort(
+    (user1, user2) => user2.age - user1.age,
+  );
+  const sortedUsersByAgeDESC1 = [...users].sort((user1, user2) =>
+    user1.age < user2.age ? 1 : -1,
+  );
 
   console.log(sortedUsersByAgeDESC1);
   console.log(sortedUsersByAgeDESC);

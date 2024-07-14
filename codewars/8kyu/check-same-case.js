@@ -2,9 +2,10 @@
   const sameCase = (a, b) =>
     !/^[A-Za-z]$/.test(a) || !/^[A-Za-z]$/.test(b)
       ? -1
-      : (/^[A-Z]$/.test(a) && /^[A-Z]$/.test(b)) || (/^[a-z]$/.test(a) && /^[a-z]$/.test(b))
-      ? 1
-      : 0;
+      : (/^[A-Z]$/.test(a) && /^[A-Z]$/.test(b)) ||
+          (/^[a-z]$/.test(a) && /^[a-z]$/.test(b))
+        ? 1
+        : 0;
 
   console.log(sameCase('C', 'B'));
   console.log(sameCase('\t', 'Z'));

@@ -7,7 +7,7 @@
  */
 
 function quarter(min) {
-  if (typeof min === "number" && min >= 0 && min <= 59) {
+  if (typeof min === 'number' && min >= 0 && min <= 59) {
     if (min >= 0 && min <= 14) {
       console.log(`First quarter: ${min}`);
     } else if (min >= 15 && min < 30) {
@@ -26,13 +26,13 @@ quarter(16);
 quarter(33);
 quarter(59);
 quarter(-1);
-quarter("5df");
+quarter('5df');
 
 // Second option
 
 function hour(min) {
   let part = 1;
-  if (min && typeof min === "number" && min >= 0 && min <= 59) {
+  if (min && typeof min === 'number' && min >= 0 && min <= 59) {
     if (min >= 0 && min <= 14) part = 1;
     if (min >= 15 && min <= 29) part = 2;
     if (min >= 30 && min <= 44) part = 3;
@@ -48,7 +48,7 @@ hour(16);
 hour(33);
 hour(59);
 hour(-1);
-hour("5df");
+hour('5df');
 
 console.log(`================================================`);
 
@@ -59,7 +59,7 @@ console.log(`================================================`);
  */
 
 function pow(a, b) {
-  if (b < 0 || typeof b === "string") console.error("Invalid value");
+  if (b < 0 || typeof b === 'string') console.error('Invalid value');
   if (b === 0) return 1;
   let result = 1;
 
@@ -71,7 +71,7 @@ function pow(a, b) {
 pow(5, 6);
 pow(3, 2);
 pow(2, 22);
-pow(5, "dfd");
+pow(5, 'dfd');
 
 console.log(`================================================`);
 
@@ -83,11 +83,11 @@ console.log(`================================================`);
  * если а = 2 то выводим на экран 9(2+7)
  */
 function sum(a) {
-  if (typeof a === "string") console.error(`${a} - is a string`);
+  if (typeof a === 'string') console.error(`${a} - is a string`);
   return a === 0 || a === 2 ? a + 7 : a / 10;
 }
 
 console.log(sum(5));
 console.log(sum(0));
 console.log(sum(2));
-console.log(sum("dfdf"));
+console.log(sum('dfdf'));

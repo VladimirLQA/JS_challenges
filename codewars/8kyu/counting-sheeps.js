@@ -39,5 +39,6 @@
   console.log(countSheeps([undefined])); // 0
 }
 {
-  const countSheeps = (sheeps) => sheeps.reduce((count, sheep) => count + (sheep === true ? 1 : 0), 0);
+  const countSheeps = (sheeps) =>
+    sheeps.reduce((count, sheep) => count + (sheep === true ? 1 : 0), 0);
 }

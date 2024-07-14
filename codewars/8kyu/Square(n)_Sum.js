@@ -6,14 +6,18 @@
 
 {
   function squareSum(numbers) {
-    return numbers.map((v) => Math.pow(v, 2)).reduce((sum, curr) => sum + curr, 0);
+    return numbers
+      .map((v) => Math.pow(v, 2))
+      .reduce((sum, curr) => sum + curr, 0);
   }
   console.log(squareSum([1, 2])); // 5
   console.log(squareSum([0, 3, 4, 5])); // 50
   console.log(squareSum([])); // 0
 }
 
-console.log(`=================================================================`);
+console.log(
+  `=================================================================`,
+);
 
 {
   function squareSum(numbers) {
@@ -24,7 +28,9 @@ console.log(`=================================================================`)
   console.log(squareSum([])); // 0
 }
 
-console.log(`=================================================================`);
+console.log(
+  `=================================================================`,
+);
 
 {
   function squareSum(numbers) {

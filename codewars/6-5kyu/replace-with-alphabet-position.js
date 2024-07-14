@@ -39,7 +39,8 @@ const alphabet = {
 
 {
   const getAlphabetPos = (str) =>
-    str.toLowerCase()
+    str
+      .toLowerCase()
       .split('')
       .map((char) => alphabet[char] ?? null)
       .filter(Boolean)
@@ -50,7 +51,8 @@ const alphabet = {
 
 {
   const getAlphabetPos = (str) =>
-    str.toLowerCase()
+    str
+      .toLowerCase()
       .split('')
       .map((char) => {
         const code = char.charCodeAt(0);

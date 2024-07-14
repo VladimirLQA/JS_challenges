@@ -10,7 +10,7 @@ const compose =
 const proportion = (max, val) => Math.round((val * 100) / max);
 
 const cellPad = (i, str, width) =>
-  (i ? str.padStart(width) : str.padEnd(width));
+  i ? str.padStart(width) : str.padEnd(width);
 const cellWIdth = (i) => [18, 10, 8, 8, 18, 6][i];
 
 const renderCell = (cell, i) => cellPad(i, cell + '', cellWIdth(i));

@@ -13,9 +13,9 @@
 }
 
 {
-
   const shortcut = (string) =>
-    string.toLowerCase()
+    string
+      .toLowerCase()
       .split('')
       .filter((char) => !'aeiou'.includes(char))
       .join('');

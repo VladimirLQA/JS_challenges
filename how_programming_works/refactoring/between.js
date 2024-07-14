@@ -14,4 +14,3 @@ const getStringBetween = (str, start, end) => {
 console.log(getStringBetween(testString, '<', '>'));
 console.log(getStringBetween(testString));
 console.log(getStringBetween(testString, '>', '<'));
-
