@@ -14,10 +14,15 @@
 
 {
   const duplicateEncode = (word) =>
-    [...word.toLowerCase()].reduce((res, char) =>
-      ([...word.toLowerCase()].filter((c) => c === char).length > 1
-        ? res += ')'
-        : res += '(', res), '');
+    [...word.toLowerCase()].reduce(
+      (res, char) => (
+        [...word.toLowerCase()].filter((c) => c === char).length > 1
+          ? (res += ')')
+          : (res += '('),
+        res
+      ),
+      '',
+    );
 
   console.log(duplicateEncode('din'));
   console.log(duplicateEncode('recede'));
@@ -27,8 +32,11 @@
 
 {
   const duplicateEncode = (word) =>
-    word.toLowerCase().replace(/./g, (char) =>
-      word.indexOf(char) === word.lastIndexOf(char) ? '(' : ')');
+    word
+      .toLowerCase()
+      .replace(/./g, (char) =>
+        word.indexOf(char) === word.lastIndexOf(char) ? '(' : ')',
+      );
 
   console.log(duplicateEncode('din'));
   console.log(duplicateEncode('recede'));
@@ -38,11 +46,30 @@
 
 {
   const duplicateEncode = (word) =>
-    [...word.toLowerCase()].map((char) =>
-      word.indexOf(char) === word.lastIndexOf(char) ? '(' : ')')
+    [...word.toLowerCase()]
+      .map((char) =>
+        word.indexOf(char) === word.lastIndexOf(char) ? '(' : ')',
+      )
       .join('');
 
   console.log(duplicateEncode('din'));
+  console.log(duplicateEncode('recede'));
+  console.log(duplicateEncode('Success'));
+  console.log(duplicateEncode('(( @'));
+}
+
+{
+  const duplicateEncode = (word) => {
+    const charCount = {};
+    const lowerWord = word.toLowerCase();
+    for (const char of lowerWord) {
+      charCount[char] ? charCount[char]++ : (charCount[char] = 1);
+    }
+    return [...lowerWord]
+      .map((char) => (charCount[char] === 1 ? '(' : ')'))
+      .join('');
+  };
+
   console.log(duplicateEncode('recede'));
   console.log(duplicateEncode('Success'));
   console.log(duplicateEncode('(( @'));
