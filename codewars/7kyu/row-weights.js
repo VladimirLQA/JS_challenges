@@ -1,5 +1,5 @@
 /*
-
+https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9
 */
 
 {
@@ -22,7 +22,7 @@
 }
 {
   const rowWeights = (arr) =>
-    arr.reduce((a, b, i) => ((a[i % 2] += b), a), [0, 0]);
+    arr.reduce((a, b, i) => (a[i % 2] += b, a), [0, 0]);
 
   console.log(rowWeights([80])); // [80, 0]
   console.log(rowWeights([100, 50])); // [100, 50]
