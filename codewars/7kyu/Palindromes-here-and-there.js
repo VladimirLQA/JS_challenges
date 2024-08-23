@@ -19,3 +19,10 @@
 
   console.log(convertPalindromes([653, 808, 5])); // [0, 1, 1]
 }
+{
+  const isPalindrome = (n) => n === +[...n.toString()].reverse().join('');
+
+  const convertPalindromes = (numbers) => numbers.map((n) => +isPalindrome(n));
+
+  console.log(convertPalindromes([653, 808, 5])); // [0, 1, 1]
+}
