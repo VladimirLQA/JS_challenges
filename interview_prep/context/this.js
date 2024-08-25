@@ -1,11 +1,11 @@
-// String.prototype.givePizza = () => 'Pizza';
-String.prototype.givePizza = function() {
-  return this + ', Pizza';
-};
+String.prototype.givePizza = () => this + `, Pizza`;
+// String.prototype.givePizza = function () {
+//   return this + ', Pizza';
+// };
 
 const name = 'Mau';
 
-// console.log(name.givePizza()); // Mau, Pizza
+console.log(name.givePizza()); // Mau, Pizza
 
 {
   const shape = {

@@ -23,14 +23,12 @@ function fibonacci(n) {
 
 console.log(fibonacci(7)); // -> [1, 1, 2, 3, 5, 8, 13, 21]
 
-const fibonacciOptimizedVersion = (function(n) {
+const fibonacciOptimizedVersion = (function (n) {
   const sequence = [1, 1];
 
   // eslint-disable-next-line consistent-return
-  return function(n) {
-    console.log(`called with`, n);
+  return function (n) {
     if (sequence.length >= n) {
-      console.log(`no compute`);
       return sequence.slice(0, n);
     }
 
@@ -38,7 +36,6 @@ const fibonacciOptimizedVersion = (function(n) {
       const last = sequence[sequence.length - 1];
       const prev = sequence[sequence.length - 2];
       sequence.push(last + prev);
-      console.log('pushed', sequence[sequence.length - 1]);
     }
   };
 })();

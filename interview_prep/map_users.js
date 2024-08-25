@@ -19,7 +19,6 @@ const users = [
   },
 ];
 
-// 1. Write code to get array of names from given array of users
 console.log('1. Write code to get array of names from given array of users');
 {
   const getUserNames = (array) =>
