@@ -40,3 +40,13 @@
   console.log(arrayLeaders([1, 2, 3, 4, 0])); // [4]
   console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [17,5,2]
 }
+{
+
+  const arrayLeaders = (numbers) =>
+    numbers.reduceRight(({ sum, acc }, n) => (
+      { sum: sum + n, acc: n > sum ? [n, ...acc] : acc }
+    ), { sum: 0, acc: [] }).acc;
+
+  console.log(arrayLeaders([1, 2, 3, 4, 0])); // [4]
+  console.log(arrayLeaders([16, 17, 4, 3, 5, 2])); // [17,5,2]
+}
