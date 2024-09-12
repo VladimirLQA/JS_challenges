@@ -21,3 +21,29 @@
   console.log(generateHash('my name some technical'));
   console.log(generateHash('      '));
 }
+{
+  const generateHash = (str) => {
+    if (!str.trim().length || str.length > 280) return false;
+
+    let result = '#';
+    let isCapitalizeNext = true;
+
+    for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+
+      if (char === ' ') {
+        isCapitalizeNext = true;
+      } else if (isCapitalizeNext) {
+        result += char.toUpperCase();
+        isCapitalizeNext = false;
+      } else {
+        result += char;
+      }
+    }
+
+    return result;
+  };
+
+  console.log(generateHash('my name some technical'));
+  console.log(generateHash('      '));
+}
