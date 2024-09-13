@@ -9,7 +9,11 @@
 
 {
   const capital = (capitals) =>
-  	capitals.map((c) => `The capital of ${c.state || c.country} is ${c.capital}`)	
+    capitals.map((c) =>
+      `The capital of ${c.state || c.country} is ${c.capital}`);
 
-  console.log(capital([{"state" : 'Maine', capital: 'Augusta'}, {country: 'Spain', "capital" : "Madrid"}]));
+  console.log(capital([
+    { 'state': 'Maine', capital: 'Augusta' },
+    { country: 'Spain', 'capital': 'Madrid' },
+  ]));
 }
