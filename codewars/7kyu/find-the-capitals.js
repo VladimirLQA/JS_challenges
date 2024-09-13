@@ -1,19 +1,37 @@
 /*
- Complete the method that takes a sequence of objects
- with two keys each: country or state, and capital.
- Keys may be symbols or strings.
+ Write a function that takes a single non-empty string of only
+ lowercase and uppercase ascii letters (word) as its argument,
+ and returns an ordered list containing the indices of
+ all capital (uppercase) letters in the string.
 
- The method should return an array of sentences
- declaring the state or country and its capital.
+ Example (Input --> Output)
+  "CodEWaRs" --> [0,3,4,6]
 */
 
 {
-  const capital = (capitals) =>
-    capitals.map((c) =>
-      `The capital of ${c.state || c.country} is ${c.capital}`);
+  const capitals = (word) =>
+    [...word].reduce(
+      (acc, currentChar, idx) => (
+        /[A-Z]/g.test(currentChar) && acc.push(idx), acc
+      ),
+      [],
+    );
 
-  console.log(capital([
-    { 'state': 'Maine', capital: 'Augusta' },
-    { country: 'Spain', 'capital': 'Madrid' },
-  ]));
+  console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]
+}
+
+{
+  const capitals = (word) =>
+    word.match(/[A-Z]/g).map((char) => word.indexOf(char));
+
+  console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]
+}
+
+{
+  const capitals = (word) =>
+    [...word]
+      .map((char, idx) => (char.toUpperCase() === char ? idx : -1))
+      .filter((el) => el >= 0);
+
+  console.log(capitals('CodEWaRs')); // [0, 3, 4, 6]
 }
