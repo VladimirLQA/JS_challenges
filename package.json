@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.ts\"",
     "fmt": "eslint . --fix",
-    "test": "npm run -s lint",
-    "prepare": "husky"
+    "test": "npm run -s lint"
   },
   "author": "",
   "license": "ISC",
