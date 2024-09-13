@@ -37,6 +37,7 @@ const fibonacciOptimizedVersion = (function (n) {
       const prev = sequence[sequence.length - 2];
       sequence.push(last + prev);
     }
+    return sequence.slice(0, n);
   };
 })();
 
