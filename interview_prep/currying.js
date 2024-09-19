@@ -63,3 +63,44 @@ console.log('GetIds', getIds([{ id: 2 }]));
   console.log(partiallyCurriedSum(2)(3));
   console.log(partiallyCurriedSum(3, 3));
 }
+{
+  const curry = (fn) => (...args) => {
+    if (fn.length > args.length) {
+      const f = fn.bind(null, ...args);
+      return curry(f);
+    } else {
+      return fn(...args);
+    }
+  };
+
+  const sum = (a, b, c) => a + b + c;
+  const curriedSum = curry(sum);
+  const partiallyCurriedSum = curriedSum(3);
+
+  console.log(curriedSum(1)(2, 3));
+  console.log(curriedSum(1, 2)(3));
+  console.log(partiallyCurriedSum(2)(3));
+  console.log(partiallyCurriedSum(3, 3));
+}
+{
+  const curry = (fn, ...par) => {
+    const curried = (...args) => (
+      fn.length > args.length
+        ? curry(fn.bind(null, ...args))
+        : fn(...args)
+    );
+
+    return par.length ? curried(...par) : curried;
+  };
+
+  const sum = (a, b, c) => a + b + c;
+  const curriedSum = curry(sum);
+  const curriedSumWithPar = curry(sum, 2);
+  const partiallyCurriedSum = curriedSum(3);
+
+  console.log(curriedSum(1)(2, 3));
+  console.log(curriedSum(1, 2)(3));
+  console.log(partiallyCurriedSum(2)(3));
+  console.log(partiallyCurriedSum(3, 3));
+  console.log(curriedSumWithPar(2)(3));
+}
