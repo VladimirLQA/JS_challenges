@@ -24,3 +24,44 @@ const getSum = (num) => {
 };
 
 console.log(getSum(5)(4)(11).getTotal());
+{
+  const sum = (n) => {
+    console.log(n);
+    return (v) => sum(n + parseInt(v) || 0);
+  };
+
+  console.log(sum(5)(4)(11));
+}
+
+{
+  const sum = (n) => {
+    let total = n;
+
+    const f = (v) => {
+      total += v;
+      return f;
+    };
+
+    f.valueOf = () => total;
+
+    return f;
+  };
+
+  console.log(sum(1)(2)(3) + sum(4));
+}
+{
+  const sum = (n) => {
+    let total = n;
+
+    const f = (v) => {
+      total += v;
+      return f;
+    };
+
+    f[Symbol.toPrimitive] = () => total;
+
+    return f;
+  };
+
+  console.log(sum(1)(2)(3) + sum(4));
+}
