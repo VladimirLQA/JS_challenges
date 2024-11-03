@@ -8,7 +8,17 @@ const objs = [
   { x: 1, y: 1, z: 3 },
 ];
 const keys = [ 'x', 'y' ];
+{
+  const unique = (arr: any[], keys: string[]) =>
+    arr.filter(
+      (obj, i, self) =>
+        !self.slice(0, i)
+          .some((o) => keys.map((k) => o[k] ?? 'undefined').join('-') ===
+            keys.map((k) => obj[k] ?? 'undefined').join('-')),
+    );
 
+  console.log(unique(objs, keys));
+}
 {
   const unique = (arr: any[], keys: string[]) => {
     const seen = new Set<string>();
@@ -39,7 +49,7 @@ const keys = [ 'x', 'y' ];
 }
 {
   const unique = (arr: any[], keys: string[]) =>
-    arr.reduce((acc, obj) => {
+    arr.reduce((acc: any[], obj) => {
       const exist = acc.find((uniq: any) =>
         keys.every((k) => obj[k] === uniq[k]));
       if (!exist) {
