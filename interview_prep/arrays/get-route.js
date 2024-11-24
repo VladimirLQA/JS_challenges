@@ -67,3 +67,38 @@
     ]),
   );
 }
+{
+  const getRoute = (tickets) => {
+    const from = {};
+    const to = {};
+    const result = [];
+
+    for (const path of tickets) {
+      from[path.from] = path;
+      to[path.to] = path;
+    }
+
+    for (const path of tickets) {
+      if (!to[path.from] && from[path.from]) {
+        result.push(path);
+        break;
+      }
+    }
+
+    while (result.length !== tickets.length) {
+      const lastPath = result[result.length - 1];
+
+      result.push(from[lastPath.to]);
+    }
+
+    return result;
+  };
+
+  console.log(
+    getRoute([
+      { from: 'Astana', to: 'Bali' },
+      { from: 'Moscow', to: 'Astana' },
+      { from: 'Bali', to: 'SPb' },
+    ]),
+  );
+}
