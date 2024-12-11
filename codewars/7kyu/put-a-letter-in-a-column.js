@@ -8,7 +8,8 @@
   console.log(buildRowText(8, 'A'));
 }
 {
-  const buildRowText = (index, character) => `${`| `.repeat(index)}|${character}|${` |`.repeat(8 - index)}`;
+  const buildRowText = (index, character) =>
+    `${`| `.repeat(index)}|${character}|${` |`.repeat(8 - index)}`;
   console.log(buildRowText(2, 'A'));
   console.log(buildRowText(8, 'A'));
 }
