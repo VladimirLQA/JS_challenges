@@ -72,7 +72,8 @@ class Atm {
 
     if (targetAmount > 0) {
       console.log(
-        'Error: Cannot dispense the exact amount. Insufficient bills for the request.',
+        'Error: Cannot dispense the exact amount.' +
+        ' Insufficient bills for the request.',
       );
       return;
     }
