@@ -9,6 +9,7 @@
   "parser": "@typescript-eslint/parser",
   "rules": {
     "strict": "off",
+    "no-inner-declarations": "off",
     "max-len": [
       "error",
       {
