@@ -38,7 +38,9 @@
   const wordCounter = (text) => {
     const mapper = {};
     text.split(/[ ,.]+/)
-      .forEach((w) => w ? mapper[`$${w}`] = (mapper[`$${w}`] || 0) + 1 : null);
+      .forEach((w) => w
+        ? mapper[`$${w}`] = (mapper[`$${w}`] || 0) + 1
+        : null);
     return {
       count: (word) => mapper[`$${word}`] || 0,
     };
