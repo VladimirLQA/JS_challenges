@@ -8,9 +8,8 @@
   const getRandomChar = () =>
     alphabet[Math.floor(Math.random() * alphabet.length)];
 
-  const array10 = () => Array.from(
-    { length: 10 },
-    (_) => {
+  const array10 = () =>
+    Array.from({ length: 10 }, () => {
       const row = ['A', 'B', 'C', 'D'];
 
       for (let i = 0; i < 6; i++) {
@@ -18,8 +17,7 @@
       }
 
       return row.sort(() => 0.5 - Math.random());
-    },
-  );
+    });
 
   console.log(array10());
 }
@@ -33,8 +31,7 @@
   };
 
   const array10 = () =>
-    Array.from({ length: 10 }, () =>
-      shuffleArray([...'ABCDABCDAB']));
+    Array.from({ length: 10 }, () => shuffleArray([...'ABCDABCDAB']));
 
   console.log(array10());
 }
