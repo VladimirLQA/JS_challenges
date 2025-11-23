@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "Keep Hydrated!.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.ts\"",
     "fmt": "eslint . --fix",
@@ -22,5 +22,8 @@
     "husky": "^9.0.11",
     "prettier": "^3.0.3",
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
