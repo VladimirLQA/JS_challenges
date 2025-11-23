@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "Keep Hydrated!.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.ts\"",
     "fmt": "eslint . --fix",

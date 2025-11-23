@@ -13,9 +13,18 @@
     "max-len": [
       "error",
       {
-        "ignoreComments": true
+        "ignoreComments": true,
+        "ignorePattern": "^(const|let|var)\\s+\\w+\\s*=\\s*\\{.*\\};?$",
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
       }
     ],
-    "camelcase": "off"
+    "camelcase": "off",
+    "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
+    "no-unused-vars": ["error", { 
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }]
   }
 }

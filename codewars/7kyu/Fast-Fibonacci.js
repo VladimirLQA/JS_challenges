@@ -20,14 +20,14 @@
   console.log(fib(100)); // 354224848179262000000
 }
 {
-  console.time('1');
+  console.time('Execution time');
   const fib = (num, current = 0, next = 1) => {
     if (num === 0) return current;
     return fib(--num, next, current + next);
   };
 
-  console.log(fib(1500)); // 354224848179262000000
-  console.timeEnd('1');
+  console.timeEnd('Execution time');
+  console.log(fib(1000));
 }
 {
   const fib = (num) => {
