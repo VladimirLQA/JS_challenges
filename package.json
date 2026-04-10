@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "Keep Hydrated!.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "lint": "eslint . && prettier --check \"**/*.js\" \"**/*.json\" \"**/*.md\" \".*rc\" \"**/*.ts\"",
     "fmt": "eslint . --fix",
-    "test": "npm run -s lint"
+    "test": "npm run -s lint",
+    "test:node": "node --loader ts-node/esm"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^9.0.11",
     "prettier": "^3.0.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.6"
   },
   "dependencies": {
