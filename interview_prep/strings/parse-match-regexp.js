@@ -36,7 +36,7 @@ const testString = '1. boo\n2. Foo\nnot\n3. foo: dar\n4. top\npot';
         (matches, line) =>
           /^\d+\.\s/.test(line)
             ? [...matches, line]
-            : ((matches[matches.length - 1] += ` ${line}`), matches),
+            : (matches[matches.length - 1] += ` ${line}`, matches),
         [],
       );
 

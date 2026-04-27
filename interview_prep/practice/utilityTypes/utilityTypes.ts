@@ -17,27 +17,27 @@ export type MyRequired<T> = {
 };
 
 export type MyExclude<UnionT, ToBeExluded> =
-    UnionT extends ToBeExluded ? never : UnionT;
+  UnionT extends ToBeExluded ? never : UnionT;
 
 export type MyExtract<UnionT, ToBeExtracted> =
-    UnionT extends ToBeExtracted ? UnionT : never;
+  UnionT extends ToBeExtracted ? UnionT : never;
 
 export type MyNonNullable<T> = T extends null | undefined ? never : T;
 
 export type MyParameters<
-T extends (...args: any) => any
+  T extends (...args: any) => any
 > = T extends (...args: infer P) => any ? P : never;
 
 export type MyConstructorParameters<
-T extends new (...args: any) => any
+  T extends new (...args: any) => any
 > = T extends new (...args: infer P) => any ? P : never;
 
 export type MyReturnType<
-T extends (...args: any) => any
+  T extends (...args: any) => any
 > = T extends (...args: any) => infer P ? P : never;
 
 export type MyInstanceType<
-T extends new (...args: any) => any
+  T extends new (...args: any) => any
 > = T extends new (...args: any) => infer P ? P : never;
 
 export type MyPick<T, K extends keyof T> = {
@@ -58,8 +58,8 @@ export type MyOmitUsingExclude<T, K extends keyof T> = {
 
 export type MyAwaited<T> =
   T extends Promise<infer U>
-    ? MyAwaited<U>
-    : T;
+  ? MyAwaited<U>
+  : T;
 
 export type UppercaseLetter<C extends string> =
   C extends 'a' ? 'A' :
@@ -68,6 +68,6 @@ export type UppercaseLetter<C extends string> =
 
 export type MyUppercase<S extends string> =
   S extends `${infer F}${infer Rest}`
-    ? `${UppercaseLetter<F>}${Rest}`
-    : S;
+  ? `${UppercaseLetter<F>}${Rest}`
+  : S;
 
