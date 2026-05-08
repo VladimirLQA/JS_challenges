@@ -4,27 +4,31 @@ Purely functional programs have no **mutable** state — but real programs need 
 These 7 patterns show how to carry state explicitly through functions,
 building from simple closures up to full fold-with-transform pipelines.
 
-## 1. Function Object
+## Function as Object
 
-Bundle a function together with the state it needs.
-Instead of passing state as arguments every call, close over it.
+Create a function that encapsulates mutable state and exposes operations on it.
 
-```
-// Instead of: compute(data, config, cache)
-// We wrap state in an object with a call method
-```
+## Closure
 
-## 2. Memoize
+Bundle a function with persistent private state using lexical scoping.
+
+## Constructor Function
+
+A factory function that creates multiple independent instances with customizable initial state.
+
+## Class style approach to deal with state
+
+### Memoize
 
 A Function Object that remembers its prior results and returns the cached answer
 when called again with the same inputs.
 
-## 3. Lazy objects
+### Lazy objects
 
 Don't compute a value until it's actually needed.
 The object holds a `thunk`(1.) and evaluates it on first access.
 
-### Annotations:
+#### Annotations:
 
 1. **Thunk** `is a piece of code or data structure that encapsulates a delayed computation.`
    It represents a value that has not yet been calculated; the actual computation is performed only
