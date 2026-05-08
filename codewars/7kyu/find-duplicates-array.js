@@ -13,11 +13,11 @@
 
 {
   const duplicates = (arr) => {
-    let seen = new Set();
-    let duplicate = new Set();
-    let result = [];
+    const seen = new Set();
+    const duplicate = new Set();
+    const result = [];
 
-    for (let item of arr) {
+    for (const item of arr) {
       if (seen.has(item) && !duplicate.has(item)) {
         duplicate.add(item);
         result.push(item);

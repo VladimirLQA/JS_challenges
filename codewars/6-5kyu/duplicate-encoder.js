@@ -63,7 +63,7 @@
     const charCount = {};
     const lowerWord = word.toLowerCase();
     for (const char of lowerWord) {
-      charCount[char] ? charCount[char]++ : (charCount[char] = 1);
+      charCount[char] ? charCount[char]++ : charCount[char] = 1;
     }
     return [...lowerWord]
       .map((char) => (charCount[char] === 1 ? '(' : ')'))

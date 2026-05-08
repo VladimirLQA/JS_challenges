@@ -4,14 +4,14 @@
 
 {
   const findCaterer = (budget, people) => {
-    let basic = 15 * people
-    let economy = 20 * people
-    let premium = (people > 60 ? 24 : 30) * people
-  
+    const basic = 15 * people;
+    const economy = 20 * people;
+    const premium = (people > 60 ? 24 : 30) * people;
+
     if (people < 1 || budget < basic) {
-      return -1
+      return -1;
     } else {
-      return premium > budget ? economy > budget ? 1 : 2 : 3
+      return premium > budget ? economy > budget ? 1 : 2 : 3;
     }
   };
 
@@ -25,8 +25,8 @@
   	budget,
   	people,
   	opts = [15 * people, 20 * people, 30 * people * (people > 60 ? 0.8 : 1)]
-  		.map(n => n = n > budget ? 0 : n)
-  	) => Math.max(...opts) ? opts.indexOf(Math.max(...opts)) + 1 : -1
+  		.map((n) => n = n > budget ? 0 : n),
+  	) => Math.max(...opts) ? opts.indexOf(Math.max(...opts)) + 1 : -1;
 
   console.log(findCaterer(150, 10)); // 1
   console.log(findCaterer(1500, 60)); // 2

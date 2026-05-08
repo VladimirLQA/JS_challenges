@@ -17,7 +17,7 @@
 {
   const isVow = (a) =>
     a.map((x) =>
-      ['a', 'e', 'i', 'o', 'u'].includes((v = String.fromCharCode(x))) ? v : x,
+      ['a', 'e', 'i', 'o', 'u'].includes(v = String.fromCharCode(x)) ? v : x,
     );
 
   console.log(

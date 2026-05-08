@@ -31,7 +31,7 @@ indices:   01234567      0246 1357
 }
 {
   const sortMyString = (s) =>
-    [...s].reduce((a, c, i) => ((a[i & 1] += c), a), ['', '']).join(' ');
+    [...s].reduce((a, c, i) => (a[i & 1] += c, a), ['', '']).join(' ');
 
   console.log(sortMyString('CodeWars'));
 }

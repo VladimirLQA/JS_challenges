@@ -9,7 +9,7 @@
 
     while (index <= idxMax) {
       result +=
-        arr.reduce((acc, arr, i) => ((acc += arr[index]), acc), '') +
+        arr.reduce((acc, arr, i) => (acc += arr[index], acc), '') +
         `${index === idxMax ? '' : ' '}`;
 
       index++;

@@ -1,13 +1,10 @@
 {
-  "extends": [
-    "prettier",
-    "metarhia"
-  ],
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "extends": ["prettier", "metarhia"],
+  "plugins": ["@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "eol-last": ["error", "always"],
+    "indent": ["error", 2],
     "strict": "off",
     "no-inner-declarations": "off",
     "max-len": [
@@ -22,9 +19,12 @@
     ],
     "camelcase": "off",
     "consistent-return": ["error", { "treatUndefinedAsUnspecified": true }],
-    "no-unused-vars": ["error", { 
-      "argsIgnorePattern": "^_",
-      "varsIgnorePattern": "^_"
-    }]
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ]
   }
 }

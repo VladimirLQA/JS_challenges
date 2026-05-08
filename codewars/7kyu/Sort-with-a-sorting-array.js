@@ -27,7 +27,7 @@
 }
 {
   const sort = (initial, sorting) =>
-    sorting.reduce((result, v, i) => ((result[v] = initial[i]), result), []);
+    sorting.reduce((result, v, i) => (result[v] = initial[i], result), []);
 
   console.log(sort(['x', 'y', 'z'], [1, 2, 0]));
   console.log(sort(['z', 'x', 'y'], [0, 2, 1]));

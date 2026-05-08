@@ -19,7 +19,7 @@
 
   const getDay = (day, isLeap) =>
     (day = new Date(isLeap ? 2024 : 2023, 0, day)) &&
-    `${(day.toLocaleDateString('english', { month: 'long' }))}, ${day.getDate()}`;
+    `${day.toLocaleDateString('english', { month: 'long' })}, ${day.getDate()}`;
 
   console.log(getDay(41, false));
   console.log(getDay(15, false));
