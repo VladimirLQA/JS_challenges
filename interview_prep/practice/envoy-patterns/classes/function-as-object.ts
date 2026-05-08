@@ -1,5 +1,3 @@
-// Function object
-
 class Average {
   private sum = 0;
   private count = 0;
