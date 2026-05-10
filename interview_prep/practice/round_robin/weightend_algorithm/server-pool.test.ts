@@ -138,7 +138,6 @@ describe('failure handling', () => {
     for (let i = 0; i < 3; i++) {
       pool.onSuccess(aIdx);   // each success restores +1
     }
-    console.log(pool);
 
     assert.equal(pool.next()!.server.id, 'a', 'server a is picked after restored');
   });

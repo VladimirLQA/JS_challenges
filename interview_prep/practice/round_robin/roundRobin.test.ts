@@ -1,5 +1,5 @@
 import { beforeEach, describe, test } from 'node:test';
-import { RoundRobinBalancer, RRBServer } from './roundRobin.ts';
+import { RoundRobinBalancer, type RRBServer } from './roundRobin.ts';
 import assert from 'node:assert/strict';
 
 function makeServers(count: number): RRBServer[] {

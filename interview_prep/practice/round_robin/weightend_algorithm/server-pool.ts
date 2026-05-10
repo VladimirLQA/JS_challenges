@@ -1,4 +1,4 @@
-import { RemoveStrategy, WRRServer } from './types.ts';
+import { type RemoveStrategy, type WRRServer } from './types.ts';
 import { SmoothWeightedRoundRobin } from './smoothWeightedRoundRobin.ts';
 
 export class ServerPool {

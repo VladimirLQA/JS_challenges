@@ -1,4 +1,4 @@
-import { WRRServerState, WRRServer, PickResult } from './types.ts';
+import { type WRRServerState, type WRRServer, type PickResult } from './types.ts';
 
 export class SmoothWeightedRoundRobin {
   private states: WRRServerState[] = [];
